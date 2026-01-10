@@ -1,20 +1,15 @@
-import './App.css'
+import './index.css'
+import {Routes, Route} from 'react-router-dom'
+import Home from './pages/Home.tsx'
+
 
 function App() {
   return (
     <>
-      <div id="container">
-        <header>
-          <nav>
-            <ul className="bg-[#1c4587]" id="navBtnContainer">
-              <li>Home</li>
-              <li>Map</li>
-              <li>Buildings & Faculties</li>
-              <li>Help/FAQ</li>
-            </ul>
-          </nav>
-        </header>
-      </div>
+     <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/home" element={<Home />} />
+     </Routes>
     </>
   )
 }

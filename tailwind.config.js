@@ -1,10 +1,15 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./src/**/*.{js,jsx,ts,tsx}",
+    "./web/src/**/*.{js,jsx,ts,tsx}",
+    "./web/index.html",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        navy: "#1c4587",
+      },
+    },
   },
   plugins: [],
 }
