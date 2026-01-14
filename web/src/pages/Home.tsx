@@ -6,6 +6,7 @@ import GalleryLogo from '../assets/galleryLogo.png'
 import FeedbackLogo from '../assets/feedbackLogo.png'
 import HeroBackground from '../assets/HeroBackground.png'
 import Placeholder from '../assets/Placeholder.png'
+import ImageCarousel from '../ImageCarousel'
 import { Link } from 'react-router-dom'
 
 
@@ -82,7 +83,9 @@ function Home() {
               </Link>
             </div>
           </section>
-          <img src={Placeholder} className="h-80 w-auto" style={{marginTop: '15vh'}}/>
+          <section className="py-16">
+          <ImageCarousel />
+          </section>
         </main>
       </div>
     </>
