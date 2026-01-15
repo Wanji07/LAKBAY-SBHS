@@ -1,13 +1,13 @@
-import '../index.css'
-import HeaderLogo from '../assets/HeaderLogo.png'
-import HeaderLogoLight from '../assets/HeaderLogoLight.png'
-import FacebookLogo from '../assets/facebookLogo.png'
-import GalleryLogo from '../assets/galleryLogo.png'
-import FeedbackLogo from '../assets/feedbackLogo.png'
-import HeroBackground from '../assets/HeroBackground.png'
-import Placeholder from '../assets/Placeholder.png'
-import ImageCarousel from '../ImageCarousel'
-import { Link } from 'react-router-dom'
+import '../index.css';
+import HeaderLogo from '../assets/HeaderLogo.png';
+import HeaderLogoLight from '../assets/HeaderLogoLight.png';
+import FacebookLogo from '../assets/facebookLogo.png';
+import GalleryLogo from '../assets/galleryLogo.png';
+import FeedbackLogo from '../assets/feedbackLogo.png';
+import HeroBackground from '../assets/HeroBackground.png';
+import Placeholder from '../assets/Placeholder.png';
+import ImageCarousel from '../ImageCarousel';
+import { Link } from 'react-router-dom';
 
 
 function Home() {
@@ -19,10 +19,10 @@ function Home() {
             <Link to="/home"><img className="h-[60px] w-auto" src={HeaderLogoLight} alt="Lakbay SBHS logo" /></Link>
             <ul className="-m-6.25 flex flex-row justify-center gap-[3em] text-lg" id="navBtnContainer">
               <li>
-                <Link to="/">Home</Link>
+                <Link to="/home">Home</Link>
               </li>
               <li>
-                <Link to="/">Map</Link>
+                <Link to="/map">Map</Link>
               </li>
               <li>
                 <Link to="/">Buildings & Faculties</Link>
@@ -53,10 +53,10 @@ function Home() {
             </ul>
           </nav>
         </header>
-        <main className="flex flex-row items-center justify-around">
-          <section id="heroSection" className="text-left flex flex-col gap-5" style={{marginTop:'10vh'}}>
-            <div className="h-[80vh] absolute inset-0 bg-cover bg-center -z-10 opacity-20" style={{backgroundImage: `url(${HeroBackground})`}}></div>
-              <div id="ctaContainer" className="m-auto flex flex-col gap-1.5 justify-center align-center" style={{marginTop: '5vh'}}>
+        <main className="h-[60vh] flex flex-row items-center justify-around overflow-hidden relative">
+          <section id="heroSection" className="text-left flex flex-col gap-5">
+            <div className="max-h-[60vh] absolute inset-0 bg-cover bg-center -z-10 opacity-20" style={{backgroundImage: `url(${HeroBackground})`}}></div>
+              <div id="ctaContainer" className="m-auto flex flex-col gap-1.5 justify-center align-center">
                 <h1 className="text-4xl font-semibold">Find Your Way Around</h1>
                 <h2 className="text-4xl font-bold">San Bartolome High School</h2>
                 <h3 className="text-2xl font-light max-w-[25em] text-justify">A web-based map system that helps students easily locate rooms, offices, and facilities inside the campus.</h3>
@@ -83,10 +83,14 @@ function Home() {
               </Link>
             </div>
           </section>
-          <section className="py-16">
-          <ImageCarousel />
+          <section>
+            <ImageCarousel />
           </section>
         </main>
+        <section id="valuesSection" className="flex flex-col gap-5 justify-center items-center mt-8">
+          <h1 className="text-[#4a6fb1] font-bold text-3xl">What is Lakbay SBHS?</h1>
+          <h2 className="max-w-4xl text-center">LAKBAY SBHS is more than just a map — it’s a tool designed to help students learn, explore, and navigate San Bartolome High School much more effectively. This capstone system serves as a preliminary project for III and Programming subjects.</h2>
+        </section>
       </div>
     </>
   )

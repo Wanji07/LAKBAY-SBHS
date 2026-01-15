@@ -1,14 +1,17 @@
 import React, {useEffect, useState} from 'react'
 import './ImageCarousel.css'
 
-import Carousel1 from './assets/Carousel1.jpg'
-import Carousel2 from './assets/Carousel2.jpg'
-import Carousel3 from './assets/Carousel3.jpg'
-import Carousel4 from './assets/Carousel4.jpg'
-import Carousel5 from './assets/Carousel5.jpg'
-import Carousel6 from './assets/Carousel6.jpg'
-import Carousel7 from './assets/Carousel7.jpg'
-import Carousel8 from './assets/Carousel8.jpg'
+import Carousel1 from './assets/Carousel1.jpg';
+import Carousel2 from './assets/Carousel2.jpg';
+import Carousel3 from './assets/Carousel3.jpg';
+import Carousel4 from './assets/Carousel4.jpg';
+import Carousel5 from './assets/Carousel5.jpg';
+import Carousel6 from './assets/Carousel6.jpg';
+import Carousel7 from './assets/Carousel7.jpg';
+import Carousel8 from './assets/Carousel8.jpg';
+import Carousel9 from './assets/Carousel9.jpg';
+import NextBtn from './assets/NextBtn.png';
+import BackBtn from './assets/BackBtn.png';
 
 const ImageCarousel = () => {
     const images = [
@@ -20,6 +23,7 @@ const ImageCarousel = () => {
         {id: 6, url: `${Carousel6}`},
         {id: 7, url: `${Carousel7}`},
         {id: 8, url: `${Carousel8}`},
+        {id: 9, url: `${Carousel9}`},
     ];
 
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
@@ -52,8 +56,8 @@ const ImageCarousel = () => {
                     key={image.id}
                 />
             ))}
-            <button onClick={handlePreviousClick} className="carousel-btn prev">‹</button>
-            <button onClick={handleNextClick} className="carousel-btn next">›</button>
+            <button onClick={handlePreviousClick} className="carousel-btn prev"><img src={BackBtn} /></button>
+            <button onClick={handleNextClick} className="carousel-btn next"><img src={NextBtn} /></button>
         </div>
     );
 };
