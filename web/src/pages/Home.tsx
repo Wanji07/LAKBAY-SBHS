@@ -88,8 +88,22 @@ function Home() {
           </section>
         </main>
         <section id="valuesSection" className="flex flex-col gap-5 justify-center items-center mt-8">
-          <h1 className="text-[#4a6fb1] font-bold text-3xl">What is Lakbay SBHS?</h1>
+          <h1 className="text-[#4a6fb1] font-bold text-3xl">Why LAKBAY SBHS Matters</h1>
           <h2 className="max-w-4xl text-center">LAKBAY SBHS is more than just a map — it’s a tool designed to help students learn, explore, and navigate San Bartolome High School much more effectively. This capstone system serves as a preliminary project for III and Programming subjects.</h2>
+          <div id="valuesContainer">
+            <div id="cardContainer">
+              <h1>Campus Navigation Made Simple</h1>
+              <p>Quickly find classrooms, offices, and facilities without confusion, helping students and visitors save time and focus on learning.</p>
+            </div>
+            <div id="cardContainer">
+              <h1>Clear Visual Map Interface</h1>
+              <p>View San Bartolome High School through an interactive map designed for clarity and ease of use.</p>
+            </div>
+            <div id="cardContainer">
+              <h1>Fast and Easy Location Search</h1>
+              <p>Search for specific rooms or offices and instantly see their location on the campus map.</p>
+            </div>
+          </div>
         </section>
       </div>
     </>
