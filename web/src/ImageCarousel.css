@@ -9,6 +9,7 @@
     max-width: 100%;
     height: auto;
     object-fit: cover;
+    border-radius: 12px;
 }
 
 .carousel-btn {
@@ -23,6 +24,7 @@
     cursor: pointer;
     border-radius: 4px;
     z-index: 10;
+    box-shadow: none;
 }
 
 .carousel-btn:hover {
@@ -31,8 +33,10 @@
 
 .carousel-btn.prev {
     left: -60px;
+    box-shadow: none;
 }
 
 .carousel-btn.next {
     right: -60px;
+    box-shadow: none;
 }

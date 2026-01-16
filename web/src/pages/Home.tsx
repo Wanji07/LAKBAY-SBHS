@@ -1,12 +1,13 @@
 import '../index.css';
-import HeaderLogo from '../assets/HeaderLogo.png';
 import HeaderLogoLight from '../assets/HeaderLogoLight.png';
 import FacebookLogo from '../assets/facebookLogo.png';
 import GalleryLogo from '../assets/galleryLogo.png';
 import FeedbackLogo from '../assets/feedbackLogo.png';
 import HeroBackground from '../assets/HeroBackground.png';
-import Placeholder from '../assets/Placeholder.png';
 import ImageCarousel from '../ImageCarousel';
+import MapIcon from '../assets/mapIcon.png';
+import NavIcon from '../assets/navIcon.png';
+import SearchIcon from '../assets/searchIcon.png';
 import { Link } from 'react-router-dom';
 
 
@@ -87,21 +88,24 @@ function Home() {
             <ImageCarousel />
           </section>
         </main>
-        <section id="valuesSection" className="flex flex-col gap-5 justify-center items-center mt-8">
+        <section id="valuesSection" className="p-5 flex flex-col gap-5 justify-center items-center mt-8">
           <h1 className="text-[#4a6fb1] font-bold text-3xl">Why LAKBAY SBHS Matters</h1>
-          <h2 className="max-w-4xl text-center">LAKBAY SBHS is more than just a map — it’s a tool designed to help students learn, explore, and navigate San Bartolome High School much more effectively. This capstone system serves as a preliminary project for III and Programming subjects.</h2>
-          <div id="valuesContainer">
-            <div id="cardContainer">
-              <h1>Campus Navigation Made Simple</h1>
-              <p>Quickly find classrooms, offices, and facilities without confusion, helping students and visitors save time and focus on learning.</p>
+          <h2 className="max-w-3xl text-center text-[#222222ea] font-medium">LAKBAY SBHS is more than just a map — it’s a tool designed to help students learn, explore, and navigate San Bartolome High School much more effectively. This capstone system serves as a preliminary project for III and Programming subjects.</h2>
+          <div id="valuesContainer" className="grid grid-cols-3 gap-10 mt-5">
+            <div id="cardContainer" className="relative p-8 rounded-md shadow-sm border-2 border-solid border-[#3764b38e] overflow-hidden bg-[#111} max-h-80 max-w-100 flex flex-col justify-center items-center text-justify gap-3">
+              <img src={MapIcon} className="max-h-16 w-auto" />
+              <h1 className="text-xl font-medium text-[#4a6fb1]">Simple Campus Navigation</h1>
+              <p className="text-[#222222ea] max-w-75 text-base/6">Quickly find classrooms, offices, and facilities without confusion, helping students and visitors focus on learning.</p>
             </div>
-            <div id="cardContainer">
-              <h1>Clear Visual Map Interface</h1>
-              <p>View San Bartolome High School through an interactive map designed for clarity and ease of use.</p>
+            <div id="cardContainer" className="relative p-8 rounded-md shadow-sm border-2 border-solid border-[#3764b38e] overflow-hidden bg-[#111} max-h-80 max-w-100 flex flex-col justify-center items-center text-justify gap-3">
+              <img src={NavIcon} className="max-h-16 w-auto" />
+              <h1 className="text-xl font-medium text-[#4a6fb1]">Clear Visual Map Interface</h1>
+              <p className="text-[#222222ea] max-w-75 text-base/6" >Explore the San Bartolome High School campus through a clear, interactive map designed for maximum ease of use.</p>
             </div>
-            <div id="cardContainer">
-              <h1>Fast and Easy Location Search</h1>
-              <p>Search for specific rooms or offices and instantly see their location on the campus map.</p>
+            <div id="cardContainer" className="relative p-8 rounded-md shadow-sm border-2 border-solid border-[#3764b38e] overflow-hidden bg-[#111} max-h-80 max-w-100 flex flex-col justify-center items-center text-justify gap-3">
+              <img src={SearchIcon} className="max-h-16 w-auto" />
+              <h1 className="text-xl font-medium text-[#4a6fb1]">Fast and Easy Location Search</h1>
+              <p className="text-[#222222ea] max-w-75 text-base/6">Find specific rooms or offices and instantly view their exact location on the campus map with a single search.</p>
             </div>
           </div>
         </section>

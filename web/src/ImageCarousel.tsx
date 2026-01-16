@@ -52,7 +52,7 @@ const ImageCarousel = () => {
                 <img
                     src={image.url}
                     alt="Lakbay SBHS Photos"
-                    className={currentImageIndex === index ? 'block' : 'hidden'}
+                    className={currentImageIndex === index ? 'block shadow-xl' : 'hidden'}
                     key={image.id}
                 />
             ))}
