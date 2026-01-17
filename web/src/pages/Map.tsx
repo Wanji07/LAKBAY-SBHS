@@ -1,7 +1,8 @@
 import '../index.css';
 import HeaderLogoLight from '../assets/HeaderLogoLight.png';
-import FacebookLogo from '../assets/facebookLogo.png';
-import GalleryLogo from '../assets/galleryLogo.png';
+import FacebookLogoLight from '../assets/facebookLogoLight.png';
+import FacebookLogoDark from '../assets/facebookLogoDark.png';
+import GalleryIcon from '../assets/galleryIcon.png';
 import FeedbackLogo from '../assets/feedbackLogo.png';
 import { Link } from 'react-router-dom';
 
@@ -28,19 +29,19 @@ function Map() {
                 <ul className="flex flex-row items-center gap-3" id="navBtnContainer2">
                     <li>
                         <Link to="/" className="flex flex-row items-center gap-1">
-                            <img src={FeedbackLogo} className="h-6 w-auto filter-navy" />
+                            <img src={FeedbackLogo} className="h-6 w-auto" />
                             <h2 className="font-medium text-[#1c4587]">Feedback</h2>
                         </Link>
                     </li>
                     <li>
                         <Link to="/" className="flex flex-row items-center gap-1">
-                            <img src={GalleryLogo} className="h-6 w-auto filter-navy" />
+                            <img src={GalleryIcon} className="h-6 w-auto" />
                             <h2 className="font-medium text-[#1c4587]">Gallery</h2>
                         </Link>
                     </li>
                     <li>
                         <Link to="/" className="flex flex-row items-center gap-1">
-                            <img src={FacebookLogo} className="h-6 w-auto filter-navy" />
+                            <img src={FacebookLogoDark} className="h-6 w-auto" />
                             <h2 className="font-medium text-[#1c4587]">Visit our Page</h2>
                         </Link>
                     </li>

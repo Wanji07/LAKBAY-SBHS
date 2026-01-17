@@ -3,13 +3,3 @@
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
 }
-
-/* Filter to convert white PNG assets to navy blue (#1c4587) */
-.filter-navy {
-  filter: brightness(0) saturate(100%) invert(19%) sepia(91%) saturate(1747%) hue-rotate(200deg) brightness(90%) contrast(93%);
-}
-
-/* Alternative filter class for lighter navy effect */
-.filter-navy-light {
-  filter: brightness(0) saturate(100%) invert(25%) sepia(70%) saturate(1500%) hue-rotate(195deg) brightness(95%) contrast(90%);
-}
