@@ -64,10 +64,8 @@ User feedback is collected through an external Google Form and is used **solely 
 
 This project is developed as part of the **Grade 12 Capstone Project** for:
 - Information and Communications Technology (ICT)
-- Programming subjects  
-
-San Bartolome High School
-
+- Inquiries, Investigation, Immersion Research Subject
+  
 ---
 
 ## ⚠️ Disclaimer
