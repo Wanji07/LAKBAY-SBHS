@@ -8,6 +8,7 @@ import ImageCarousel from '../ImageCarousel';
 import MapIcon from '../assets/mapIcon.png';
 import NavIcon from '../assets/navIcon.png';
 import SearchIcon from '../assets/searchIcon.png';
+import feedbackIcon from '../assets/feedbackIcon.png';
 import { Link } from 'react-router-dom';
 
 
@@ -107,6 +108,49 @@ function Home() {
               <h1 className="text-xl font-medium text-[#4a6fb1]">Fast and Easy Location Search</h1>
               <p className="text-[#222222ea] max-w-75 text-base/6">Find specific rooms or offices and instantly view their exact location on the campus map with a single search.</p>
             </div>
+          </div>
+        </section>
+        <div className="
+          relative
+          after: my-15
+          after: mb-35
+          before:content-['']
+          before:absolute
+          before:z-1
+          before:-top-2.25
+          before:left-[calc(50%-9px)]
+          before:w-4.5
+          before:h-4.5
+          before:bg-[#4a6fb1]
+          before:border
+          before:border-[rgb(48,49,51)]
+          before:rounded-full
+          before:shadow-[inset_0_0_0_2px_white,0_0_0_4px_white]
+        ">
+          <div className="
+            relative
+            before:content-['']
+            before:absolute
+            before:top-0
+            before:left-[5%]
+            before:right-[5%]
+            before:w-[90%]
+            before:h-px
+            before:bg-[linear-gradient(to_right,transparent,rgb(48,49,51),transparent)]
+          ">
+          </div>
+        </div>
+        <section id="feedbackSection" className="mb-5 flex flex-col gap-5 items-center justify-center">
+          <div id="feedbackHeaderContainer" className="flex justify-center items-center gap-5">
+            <img src={feedbackIcon} className="max-h-15"/> 
+            <h1 className="text-4xl font-semibold text-[#222222ea]">Help Us Grow <span className="text-[#4a6fb1]">Lakbay SBHS</span></h1>
+          </div>
+          <div id="feedbackContentContainer" className="flex flex-col justify-center items-center gap-8">
+            <h3 className="text-lg font-medium text-[#222222ea] text-center max-w-3xl">Share your experience navigating San Bartolome High School. Your insights will help shape the development of the LAKBAY system.</h3>
+            <button className="w-[80vh] bg-[#4a6fb1] hover:bg-[#26539c] text-white font-bold py-2 px-4 rounded-xs">
+              <a href="#"><h2>SHARE YOUR FEEDBACK</h2></a>
+            </button>
+            <p className="-mt-5 text-[#2222229f]">* For research and system development purposes only.</p>
           </div>
         </section>
       </div>
