@@ -1,53 +1,142 @@
 import '../index.css';
 import HeaderLogoLight from '../assets/HeaderLogoLight.png';
+import FooterLogo from '../assets/HeaderLogo.png'
 import FacebookLogoLight from '../assets/facebookLogoLight.png';
 import FacebookLogoDark from '../assets/facebookLogoDark.png';
 import GalleryIcon from '../assets/galleryIcon.png';
-import FeedbackLogo from '../assets/feedbackLogo.png';
+import MapCanvas from '../MapCanvas';
+import SearchIcon from '../assets/searchRoomIcon.png';
+import Arrow from '../assets/Arrow.png';
 import { Link } from 'react-router-dom';
 
 function Map() {
     return(
         <>
-        <header className="p-1  bg-[#fefeff] text-[#546e7b]">
-            <nav className="pb-1 flex flex-row items-center justify-around" style={{boxShadow: '0px 3px 10px 0px rgba(0, 0, 0, 0.1)'}}>
-                <Link to="/home"><img className="h-[60px] w-auto" src={HeaderLogoLight} alt="Lakbay SBHS logo" /></Link>
-                <ul className="-m-6.25 flex flex-row justify-center gap-[3em] text-lg" id="navBtnContainer">
-                    <li>
-                        <Link to="/home">Home</Link>
-                    </li>
-                    <li>
-                        <Link to="/map">Map</Link>
-                    </li>
-                    <li>
-                        <Link to="/">Buildings & Faculties</Link>
-                    </li>
-                    <li>
-                        <Link to="/">About</Link>
-                    </li>
-                </ul>
-                <ul className="flex flex-row items-center gap-3" id="navBtnContainer2">
-                    <li>
-                        <Link to="/" className="flex flex-row items-center gap-1">
-                            <img src={FeedbackLogo} className="h-6 w-auto" />
-                            <h2 className="font-medium text-[#1c4587]">Feedback</h2>
-                        </Link>
-                    </li>
-                    <li>
-                        <Link to="/" className="flex flex-row items-center gap-1">
-                            <img src={GalleryIcon} className="h-6 w-auto" />
-                            <h2 className="font-medium text-[#1c4587]">Gallery</h2>
-                        </Link>
-                    </li>
-                    <li>
-                        <Link to="/" className="flex flex-row items-center gap-1">
-                            <img src={FacebookLogoDark} className="h-6 w-auto" />
-                            <h2 className="font-medium text-[#1c4587]">Visit our Page</h2>
-                        </Link>
-                    </li>
-                </ul>
-            </nav>
-        </header>
+        <div id="container">
+            <header className="p-1  bg-[#fefeff] text-[#546e7b]">
+                <nav className="pb-1 flex flex-row items-center justify-around" style={{boxShadow: '0px 3px 10px 0px rgba(0, 0, 0, 0.1)'}}>
+                    <Link to="/home"><img className="h-[60px] w-auto" src={HeaderLogoLight} alt="Lakbay SBHS logo" /></Link>
+                    <ul className="-m-6.25 flex flex-row justify-center gap-[3em] text-lg" id="navBtnContainer">
+                        <li>
+                            <Link to="/home">Home</Link>
+                        </li>
+                        <li>
+                            <Link to="/map">Map</Link>
+                        </li>
+                        <li>
+                            <Link to="/">Buildings & Faculties</Link>
+                        </li>
+                        <li>
+                            <Link to="/">About</Link>
+                        </li>
+                    </ul>
+                    <ul className="flex flex-row items-center gap-3" id="navBtnContainer2">
+                        <li>
+                            <Link to="/" className="flex flex-row items-center gap-1">
+                                <img src={GalleryIcon} className="h-6 w-auto" />
+                                <h2 className="font-medium text-[#1c4587]">Gallery</h2>
+                            </Link>
+                        </li>
+                        <li>
+                            <Link to="/" className="flex flex-row items-center gap-1">
+                                <img src={FacebookLogoDark} className="h-6 w-auto" />
+                                <h2 className="font-medium text-[#1c4587]">Visit our Page</h2>
+                            </Link>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+            <main className="grid grid-cols-[1fr_2fr] h-screen text-[#fefeff]" >
+                <aside className="bg-[#1c4587] max-w-[40vh] flex flex-col gap-5 px-5 pt-5" style={{boxShadow: '0px 4px 10px 0px rgba(0, 0, 0, 0.5)'}}>
+                    <h1 className="font-bold text-2xl">Explore Campus</h1>
+                    <div id="searchInputContainer" className="flex items-center bg-[#4a6fb1] rounded-sm border border-[#1c4587] focus-within:ring-2 focus-within:ring-[#1c4587] focus-within:border-transparent overflow-hidden">
+                        <img src={SearchIcon} className="h-5 w-5 ml-3 opacity-80" />
+                        <input type="text" placeholder="Search locations..." className="bg-transparent text-white font-medium px-3 py-2 flex-1 focus:outline-none placeholder:text-white placeholder:opacity-70" />
+                    </div>
+                    <div id="categoryContainer" className="flex flex-col gap-2">
+                        <h1 className="font-semibold text-[#fefeff]">FILTER BY CATEGORY</h1>
+                        <select name="buildings" id="buildings" className="bg-[#4a6fb1] text-white font-medium px-3 py-2 rounded-sm border border-[#1c4587] focus:outline-none focus:ring-2 focus:ring-[#1c4587] focus:border-transparent cursor-pointer">
+                            <option value="general" className="bg-white text-[#1c4587] font-medium py-2">General</option>
+                            <option value="classrooms" className="bg-white text-[#1c4587] font-medium py-2">Classrooms</option>
+                            <option value="faculties" className="bg-white text-[#1c4587] font-medium py-2">Faculties</option>
+                            <option value="laboratories" className="bg-white text-[#1c4587] font-medium py-2">Laboratories</option>
+                            <option value="comfort-rooms" className="bg-white text-[#1c4587] font-medium py-2">Comfort Rooms</option>
+                        </select>
+                    </div>
+                    <div id="quickLocateContainer">
+                        <h1 className="font-semibold">QUICK LINKS</h1>
+                        <ul className="flex flex-col gap-2 mt-2">
+                            <li className="flex items-center gap-2 text-white hover:text-[#1e68df] transition-colors cursor-pointer">
+                                <img src={Arrow} className="h-4" />
+                                <Link to="/" className="hover:underline">Principal's Office</Link>
+                            </li>
+                            <li className="flex items-center gap-2 text-white hover:text-[#1e68df] transition-colors cursor-pointer">
+                                <img src={Arrow} className="h-4" />
+                                <Link to="/" className="hover:underline">Registrar's Office</Link>
+                            </li>
+                        </ul>
+                    </div>
+                    <hr className="border-t border-[#4a6fb1] opacity-60 my-2" />
+                    <div id="missingRoomContainer" className="flex flex-col gap-2">
+                        <h1 className="font-semibold flex justify-center">Missing Information?</h1>
+                        <button className="bg-[#4a6fb1] text-white font-medium px-3 py-2 rounded-sm border border-[#1c4587] hover:bg-[#1e68df] focus:outline-none focus:ring-2 focus:ring-[#1c4587] focus:border-transparent transition-colors cursor-pointer">
+                            Report Here.
+                        </button>
+                    </div>
+                </aside>
+                <section className="relative">
+                    <div id="mapContainer" className="flex justify-center items-center w-4xl h-auto">
+                        <MapCanvas />
+                    </div>
+                    <div id="mapInformationContainer" className="absolute top-4 right-15 bg-[#1c4587] text-white p-4 rounded-lg shadow-lg border border-[#4a6fb1] min-w-[250px] backdrop-blur-sm">
+                        <h1 className="font-semibold text-sm text-[#4a6fb1] mb-1">SELECTED LOCATION</h1>
+                        <h2 className="font-bold text-lg mb-2">(building name)</h2>
+                        <div className="flex flex-col gap-1 text-sm">
+                            <div className="flex justify-between">
+                                <span className="text-[#fefeffb3]">Status:</span>
+                                <span className="font-medium">(status)</span>
+                            </div>
+                            <div className="flex justify-between">
+                                <span className="text-[#fefeffb3]">Floor:</span>
+                                <span className="font-medium">(floor)</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+        <footer id="footerContainer" className="relative z-20 flex flex-row justify-around items-center p-5 bg-[#4a6fb1] text-[#fefeff]">
+          <section id="footerLeftContainer" className="flex flex-col gap-3 items-start justify-start">
+            <img src={FooterLogo} className="max-h-15 w-auto" alt="Lakbay SBHS Logo" />
+              <h3 className="ml-3 text-[#fefeff] font-medium">Optimizing campus navigation for San Bartolome High School.</h3>
+            <div id="footerIconContainer" className="ml-3">
+              <a href="https://www.facebook.com/profile.php?id=61586091340320">
+                <img src={FacebookLogoLight} className="max-h-8 w-auto"/>
+              </a>
+            </div>
+          </section>
+          <section id="footerRightContainer" className="flex flex-row gap-50">
+            <div>
+            <h2 className="mb-2 text-[#fefeff] font-semibold">Quick Links</h2>
+              <ul className="flex flex-col gap-2">
+                <li className="text-[#fefeffda]"><Link to="/home">Home</Link></li>
+                <li className="text-[#fefeffda]"><Link to="/">Map</Link></li>
+                <li className="text-[#fefeffda]"><Link to="/">About Project</Link></li>
+              </ul>
+            </div>
+            <div>
+            <h2 className="mb-2 text-[#fefeff] font-semibold">Miscellaneous</h2>
+              <ul className="flex flex-col gap-2">
+                <li className="text-[#fefeffda]"><Link to="/home">Meet the Team</Link></li>
+                <li className="text-[#fefeffda]"><Link to="/">Contact Us</Link></li>
+                <li className="text-[#fefeffda]"><Link to="/">Gallery</Link></li>
+              </ul>
+            </div>
+          </section>
+        </footer>
+        <footer className="relative z-20 p-2 flex justify-center bg-[#26539c] text-[#fefeff] ">
+          <p className="text-[#fefeffc0] font-semibold">© 2024 Lakbay SBHS Capstone Project | Developed for III and Programming Grade 12 Subjects.</p>
+        </footer>
+        </div>
     </>
     )
 }
