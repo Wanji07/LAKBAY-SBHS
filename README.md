@@ -13,6 +13,8 @@ This system is aligned with the research titled:
 
 > **“A Descriptive Study on Navigation Challenges of Senior High School Students as Basis for a Web-Based Wayfinding System for San Bartolome High School.”**
 <img width="1733" height="1812" alt="image" src="https://github.com/user-attachments/assets/dbf63398-0325-4ce3-a87b-3e11e0c9047f" />
+<img width="1733" height="1226" alt="image" src="https://github.com/user-attachments/assets/8a023019-083f-4cd2-b06a-bd7622449863" />
+
 
 ---
 
