@@ -1,3 +1,4 @@
 #SB1:hover, #SB2:hover, #hb-building:hover, #covered-court:hover, #new-building:hover, #mathay-building:hover {
     fill: #4a6fb1;
+    cursor: pointer;
 }

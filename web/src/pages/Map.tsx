@@ -7,6 +7,7 @@ import GalleryIcon from '../assets/galleryIcon.png';
 import MapCanvas from '../MapCanvas';
 import SearchIcon from '../assets/searchRoomIcon.png';
 import Arrow from '../assets/Arrow.png';
+import SelectedLocationCard from '../SelectedLocationCard';
 import { Link } from 'react-router-dom';
 
 function Map() {
@@ -88,21 +89,8 @@ function Map() {
                     <div id="mapContainer" className="flex justify-center items-center w-4xl h-auto">
                         <MapCanvas />
                     </div>
-                    <div id="mapInformationContainer" className="absolute top-4 right-15 bg-[#1c4587] text-white p-4 rounded-lg shadow-lg border border-[#4a6fb1] min-w-[250px] backdrop-blur-sm">
-                        <h1 className="font-semibold text-sm text-[#4a6fb1] mb-1">SELECTED LOCATION</h1>
-                        <h2 className="font-bold text-lg mb-2">(building name)</h2>
-                        <div className="flex flex-col gap-1 text-sm">
-                            <div className="flex justify-between">
-                                <span className="text-[#fefeffb3]">Status:</span>
-                                <span className="font-medium">(status)</span>
-                            </div>
-                            <div className="flex justify-between">
-                                <span className="text-[#fefeffb3]">Floor:</span>
-                                <span className="font-medium">(floor)</span>
-                            </div>
-                        </div>
-                    </div>
                 </section>
+                <SelectedLocationCard />
             </main>
         <footer id="footerContainer" className="relative z-20 flex flex-row justify-around items-center p-5 bg-[#4a6fb1] text-[#fefeff]">
           <section id="footerLeftContainer" className="flex flex-col gap-3 items-start justify-start">
