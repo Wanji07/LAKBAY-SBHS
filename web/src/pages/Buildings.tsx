@@ -1,0 +1,103 @@
+import '../index.css';
+import HeaderLogoLight from '../assets/HeaderLogoLight.png';
+import FooterLogo from '../assets/HeaderLogo.png'
+import FacebookLogoLight from '../assets/facebookLogoLight.png';
+import FacebookLogoDark from '../assets/facebookLogoDark.png';
+import GalleryIcon from '../assets/galleryIcon.png';
+import buildingPageBackground from '../assets/buildingPageBackground.png';
+import BuildingsCard  from '../BuildingsCard';
+import { Link } from 'react-router-dom';
+
+function Buildings() {
+  return (
+    <>
+      <div id="container">
+        <header className="p-1 bg-[#fefeff] text-[#546e7b]">
+          <nav className="pb-1 flex flex-row items-center justify-around" style={{boxShadow: '0px 3px 10px 0px rgba(0, 0, 0, 0.1)'}}>
+            <Link to="/home">
+              <img className="h-15 w-auto" src={HeaderLogoLight} alt="Lakbay SBHS logo" />
+            </Link>
+            <ul className="-m-6.25 flex flex-row justify-center gap-[3em] text-lg" id="navBtnContainer">
+              <li>
+                <Link to="/home">Home</Link>
+              </li>
+              <li>
+                <Link to="/map">Map</Link>
+              </li>
+              <li>
+                <Link to="/buildings">Buildings & Faculties</Link>
+              </li>
+              <li>
+                <Link to="/">About</Link>
+              </li>
+            </ul>
+            <ul className="flex flex-row items-center gap-8" id="navBtnContainer2">
+              <li>
+                <Link to="/" className="flex flex-row items-center gap-2">
+                  <img src={GalleryIcon} className="h-6 w-auto filter-navy" />
+                  <h2 className="font-medium text-[#1c4587]">Gallery</h2>
+                </Link>
+              </li>
+              <li>
+                <Link to="/" className="flex flex-row items-center gap-2">
+                  <img src={FacebookLogoDark} className="h-6 w-auto" />
+                  <h2 className="font-medium text-[#1c4587]">Visit our Page</h2>
+                </Link>
+              </li>
+            </ul>
+          </nav>
+        </header>
+        <div className="fixed inset-0 bg-cover bg-center bg-no-repeat -z-10 opacity-40" 
+              style={{backgroundImage: `url(${buildingPageBackground})`}}>
+        </div>
+
+        <div className="relative text-center py-10 bg-gradient-to-r from-[#4a6fb1] to-[#1c4587] text-white shadow-lg">
+          <h1 className="text-3xl md:text-4xl font-bold mb-4">Buildings & Facilities</h1>
+          <p className="text-lg md:text-xl text-[#fefeffda] max-w-2xl mx-auto px-4">
+            Explore the modern infrastructure and academic facilities of San Bartolome High School
+          </p>
+        </div>
+        
+        <main className="relative container mx-auto px-4 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 mt-8 gap-6 min-h-screen">
+            <BuildingsCard />
+        </main>
+        
+        <footer id="footerContainer" className="w-screen mt-20 flex flex-row justify-around items-center p-5 bg-[#4a6fb1] text-[#fefeff]" style={{boxShadow: '0px -2px 8px 0px rgba(0, 0, 0, 0.1)'}}>
+          <section id="footerLeftContainer" className="flex flex-col gap-3 items-start justify-start">
+            <img src={FooterLogo} className="max-h-15 w-auto" alt="Lakbay SBHS Logo" />
+            <h3 className="ml-3 text-[#fefeff] font-medium">Optimizing campus navigation for San Bartolome High School.</h3>
+            <div id="footerIconContainer" className="ml-3">
+              <a href="https://www.facebook.com/profile.php?id=61586091340320">
+                <img src={FacebookLogoLight} className="max-h-8 w-auto"/>
+              </a>
+            </div>
+          </section>
+          <section id="footerRightContainer" className="flex flex-row gap-50">
+            <div>
+              <h2 className="mb-2 text-[#fefeff] font-semibold">Quick Links</h2>
+              <ul className="flex flex-col gap-2">
+                <li className="text-[#fefeffda]"><Link to="/home">Home</Link></li>
+                <li className="text-[#fefeffda]"><Link to="/">Map</Link></li>
+                <li className="text-[#fefeffda]"><Link to="/">About Project</Link></li>
+              </ul>
+            </div>
+            <div>
+              <h2 className="mb-2 text-[#fefeff] font-semibold">Miscellaneous</h2>
+              <ul className="flex flex-col gap-2">
+                <li className="text-[#fefeffda]"><Link to="/home">Meet the Team</Link></li>
+                <li className="text-[#fefeffda]"><Link to="/">Contact Us</Link></li>
+                <li className="text-[#fefeffda]"><Link to="/">Gallery</Link></li>
+              </ul>
+            </div>
+          </section>
+        </footer>
+        
+        <footer className="w-full p-2 flex justify-center bg-[#26539c] text-[#fefeff]">
+          <p className="text-[#fefeffc0] font-semibold">© 2024 Lakbay SBHS Capstone Project | Developed for III and Programming Grade 12 Subjects.</p>
+        </footer>
+      </div>
+    </>
+  )
+}
+
+export default Buildings

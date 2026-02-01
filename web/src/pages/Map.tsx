@@ -7,7 +7,6 @@ import GalleryIcon from '../assets/galleryIcon.png';
 import MapCanvas from '../MapCanvas';
 import SearchIcon from '../assets/searchRoomIcon.png';
 import Arrow from '../assets/Arrow.png';
-import SelectedLocationCard from '../SelectedLocationCard';
 import { Link } from 'react-router-dom';
 
 function Map() {
@@ -25,7 +24,7 @@ function Map() {
                             <Link to="/map">Map</Link>
                         </li>
                         <li>
-                            <Link to="/">Buildings & Faculties</Link>
+                            <Link to="/buildings">Buildings & Faculties</Link>
                         </li>
                         <li>
                             <Link to="/">About</Link>
@@ -90,9 +89,8 @@ function Map() {
                         <MapCanvas />
                     </div>
                 </section>
-                <SelectedLocationCard />
             </main>
-        <footer id="footerContainer" className="relative z-20 flex flex-row justify-around items-center p-5 bg-[#4a6fb1] text-[#fefeff]">
+        <footer id="footerContainer" className="relative z-20 flex flex-row justify-around items-center p-5 bg-[#4a6fb1] text-[#fefeff]" style={{boxShadow: '0px -2px 8px 0px rgba(0, 0, 0, 0.1)'}}>
           <section id="footerLeftContainer" className="flex flex-col gap-3 items-start justify-start">
             <img src={FooterLogo} className="max-h-15 w-auto" alt="Lakbay SBHS Logo" />
               <h3 className="ml-3 text-[#fefeff] font-medium">Optimizing campus navigation for San Bartolome High School.</h3>

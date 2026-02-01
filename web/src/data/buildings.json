@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1,
+        "buildingName": "New Building",
+        "description": "Officially opened by Mayor Joy Belmonte on January 26, 2025, this is a newly rehabilitated four-storey structure. It features modernized classroom facilities and was part of the city's \"New Year, New School\" initiative.",
+        "tags": ["Academic", "4 Floors", "Rehabilitated Classrooms"]
+    },
+    {
+        "id": 2,
+        "buildingName": "Sonny Building 1",
+        "description": "This is one of the foundational academic buildings on the campus. It typically houses standard classrooms for Junior High School students.",
+        "tags": ["Academic", "Foundational", "Standard Classrooms"]
+    },
+    {
+        "id": 3,
+        "buildingName": "Sonny Building 2",
+        "description": "Constructed in 2009 under the administration of Mayor Feliciano \"Sonny\" Belmonte. It was added to accommodate the rapidly increasing student population from the surrounding San Bartolome and Bagbag areas.",
+        "tags": ["Academic", "Expansion", "Standard Classrooms"]
+    },
+    {
+        "id": 4,
+        "buildingName": "Helbert Bautista Building",
+        "description": " Constructed in 2013 during the administration of Mayor Herbert Bautista. Like the SB buildings, it was built to further expand the school's capacity for its thousands of learners. ",
+        "tags": ["Academic", "STE-Specialized", "Expansion"]
+    },
+    {
+        "id": 5,
+        "buildingName": "Mathay Building",
+        "description": "The original Mathay Building was demolished in 2018. It was replaced with a larger, modern multi-storey structure specifically designed to support the introduction of Senior High School courses, including specialized tracks like Academic and Technical-Vocational-Livelihood (TVL).",
+        "tags": ["Academic", "Senior High School", "SHS-Specialized"]
+    },
+    {
+        "id": 6,
+        "buildingName": "Covered Court",
+        "description": "A multi-purpose covered gymnasium facility that serves as the main venue for sports activities, physical education classes, and school events.",
+        "tags": ["Sports", "Events", "Multi-purpose"]
+    }
+]

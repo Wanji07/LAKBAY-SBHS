@@ -1,9 +1,11 @@
 import './MapCanvas.css';
 import { useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 
 function MapCanvas() {
+    const navigate = useNavigate();
+    
     useEffect(() => {
         const SB1 = document.getElementById('SB1');
         const SB2 = document.getElementById('SB2');
@@ -13,27 +15,27 @@ function MapCanvas() {
         const mathay_building = document.getElementById('mathay-building');
 
         const handleSB1Click = () => {
-            console.log("SB1 Clicked!");
+            navigate('/map/SB1');
         };
 
         const handleSB2Click = () => {
-            console.log("SB2 Clicked!");
+            navigate('/map/SB2')
         }
 
         const handleHBClick = () => {
-            console.log("HB Building Clicked!");
+            navigate('/map/HB')
         }
 
         const handleNBClick = () => {
-            console.log("New Building Clicked!");
+            navigate('/map/NB')
         }
 
         const handleCourtClick = () => {
-            console.log("Covered Court Clicked!");
+            navigate('/map/court')
         }
         
         const handleMathayClick = () => {
-            console.log("Mathay Building Clicked!")
+            navigate('/map/mathay')
         }
 
         SB1?.addEventListener('click', handleSB1Click);
