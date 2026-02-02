@@ -27,7 +27,7 @@
         "id": 5,
         "buildingName": "Mathay Building",
         "description": "The original Mathay Building was demolished in 2018. It was replaced with a larger, modern multi-storey structure specifically designed to support the introduction of Senior High School courses, including specialized tracks like Academic and Technical-Vocational-Livelihood (TVL).",
-        "tags": ["Academic", "Senior High School", "SHS-Specialized"]
+        "tags": ["Academic", "Senior High School", "Specialized"]
     },
     {
         "id": 6,

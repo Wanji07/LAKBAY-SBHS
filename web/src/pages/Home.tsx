@@ -60,13 +60,8 @@ function Home() {
               </div>
             <div id="heroBtnContainer" className="flex flex-row gap-5">
               <Link to="/map">
-                <button className="bg-[#4a6fb1] hover:bg-[#26539c] text-white font-bold py-2 px-4 rounded">
+                <button className="bg-[#4a6fb1] hover:bg-[#26539c] text-white font-bold py-2 px-4 rounded min-w-2xs">
                   <h2>Open Interactive Map</h2>
-                </button>
-              </Link>
-              <Link to="/">
-                <button className="bg-transparent hover:bg-[#4a6fb1] text-[#4a6fb1] font-semibold hover:text-white py-2 px-4 border border-[#4a6fb1] hover:border-transparent rounded">
-                  <h2>Search a Room</h2>
                 </button>
               </Link>
             </div>
