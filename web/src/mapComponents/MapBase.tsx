@@ -2,6 +2,7 @@ function MapBase() {
     return(
         <>
         <svg width="1740" height="956" viewBox="0 0 1740 956" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g transform="translate(-105 -105)">
         <g id="base">
         <g id="Group">
         <g id="Clip path group">
@@ -912,6 +913,7 @@ function MapBase() {
         <g mask="url(#mask78_2004_2922)">
         <g id="Group_92">
         <path id="Vector_115" d="M723.521 214.797L727.13 144.719L891.104 153.161L887.495 223.24L723.521 214.797Z" fill="#1F4073"/>
+        </g>
         </g>
         </g>
         </g>

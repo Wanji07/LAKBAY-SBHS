@@ -1,7 +1,7 @@
 function Cafeteria1() {
     return(
         <>
-        <svg width="1569" height="668" viewBox="0 0 1569 668" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg width="1740" height="956" viewBox="0 0 1740 956" fill="none" xmlns="http://www.w3.org/2000/svg">
     <g transform="translate(196 507)">
     <g id="cafeteria-one">
         <g id="Clip path group">

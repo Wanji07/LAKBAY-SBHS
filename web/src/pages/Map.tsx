@@ -85,7 +85,7 @@ function Map() {
                     </div>
                 </aside>
                 <section className="relative">
-                    <div id="mapContainer" className="flex justify-center items-center w-4xl h-auto">
+                    <div id="mapContainer" className="flex justify-center items-center w-6xl h-auto mt-50">
                         <MapCanvas />
                     </div>
                 </section>

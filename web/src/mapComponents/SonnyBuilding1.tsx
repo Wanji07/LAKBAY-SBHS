@@ -1,8 +1,8 @@
 function SonnyBuilding1() {
     return(
         <>
-        <svg width="1569" height="668" viewBox="0 0 1569 668" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <g transform="translate(323 298)">
+        <svg width="1740" height="956" viewBox="0 0 1740 956" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g transform="translate(287 130)">
     <g id="sonny-building-1">
             <g id="Clip path group">
             <mask id="mask0_2001_2878" style={{ maskType: "luminance" }} maskUnits="userSpaceOnUse" x="32" y="171" width="54" height="55">

@@ -1,11 +1,6 @@
 import './MapCanvas.css';
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-<<<<<<< HEAD
-import mapFrame from './mapAssets/map-frame.png';
-import Cafeteria1 from './mapComponents/Cafeteria1';
-
-=======
 import Cafeteria1 from './mapComponents/Cafeteria1';
 import Cafeteria2 from './mapComponents/Cafeteria2';
 import HelbertBuilding from './mapComponents/HelbertBuilding';
@@ -18,7 +13,6 @@ import SonnyBuilding1 from './mapComponents/SonnyBuilding1';
 import SonnyBuilding2 from './mapComponents/SonnyBuilding2';
 import CoveredCourt from './mapComponents/CoveredCourt';
 import MapFrame from './mapComponents/MapBase';
->>>>>>> 2afffe31cbbbc71785d8ef8e07849be0d105434f
 
 
 function MapCanvas() {
@@ -76,10 +70,6 @@ function MapCanvas() {
     return(
         <>
             <div id="container" className="map-container">
-<<<<<<< HEAD
-                <Cafeteria1 />
-
-=======
                 <MapFrame />
                 <Cafeteria1 />
                 <Cafeteria2 />
@@ -92,7 +82,6 @@ function MapCanvas() {
                 <SonnyBuilding1 />
                 <SonnyBuilding2 />
                 <CoveredCourt />
->>>>>>> 2afffe31cbbbc71785d8ef8e07849be0d105434f
             </div>
         </>
     )
