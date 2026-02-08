@@ -222,7 +222,6 @@ function Cafeteria2() {
 </g>
 </g>
 </svg>
-
         </>
     )
 }

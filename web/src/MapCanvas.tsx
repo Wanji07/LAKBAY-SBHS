@@ -1,16 +1,31 @@
 import './MapCanvas.css';
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+<<<<<<< HEAD
 import mapFrame from './mapAssets/map-frame.png';
 import Cafeteria1 from './mapComponents/Cafeteria1';
 
+=======
+import Cafeteria1 from './mapComponents/Cafeteria1';
+import Cafeteria2 from './mapComponents/Cafeteria2';
+import HelbertBuilding from './mapComponents/HelbertBuilding';
+import MathayBuilding from './mapComponents/MathayBuilding';
+import MiscBuilding1 from './mapComponents/MiscBuilding1';
+import MiscBuilding2 from './mapComponents/MiscBuilding2';
+import MiscBuilding3 from './mapComponents/MiscBuilding3';
+import NewBuilding from './mapComponents/NewBuilding';
+import SonnyBuilding1 from './mapComponents/SonnyBuilding1';
+import SonnyBuilding2 from './mapComponents/SonnyBuilding2';
+import CoveredCourt from './mapComponents/CoveredCourt';
+import MapFrame from './mapComponents/MapBase';
+>>>>>>> 2afffe31cbbbc71785d8ef8e07849be0d105434f
 
 
 function MapCanvas() {
     const navigate = useNavigate();
     
     useEffect(() => {
-        const sonnyBuilding1 = document.getElementById('sonny-building-1');
+        const sonnyBuilding1 = document.getElementById('sonny-building-1')
         const sonnyBuilding2 = document.getElementById('sonny-building-2');
         const helbertBuilding = document.getElementById('helbert-building');
         const coveredCourt = document.getElementById('covered-court');
@@ -61,8 +76,23 @@ function MapCanvas() {
     return(
         <>
             <div id="container" className="map-container">
+<<<<<<< HEAD
                 <Cafeteria1 />
 
+=======
+                <MapFrame />
+                <Cafeteria1 />
+                <Cafeteria2 />
+                <HelbertBuilding />
+                <MathayBuilding />
+                <MiscBuilding1 />
+                <MiscBuilding2 />
+                <MiscBuilding3 />
+                <NewBuilding />
+                <SonnyBuilding1 />
+                <SonnyBuilding2 />
+                <CoveredCourt />
+>>>>>>> 2afffe31cbbbc71785d8ef8e07849be0d105434f
             </div>
         </>
     )

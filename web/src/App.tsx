@@ -6,7 +6,7 @@ import Buildings from './pages/Buildings.tsx';
 import SB1 from './pages/SB1.tsx';
 import SB2 from './pages/SB2.tsx';
 import HB from './pages/HB.tsx';
-import Mathay from './pages/mathay.tsx';
+import Mathay from './pages/Mathay.tsx';
 import NB from './pages/NB.tsx';
 import Court from './pages/Court.tsx';
 
