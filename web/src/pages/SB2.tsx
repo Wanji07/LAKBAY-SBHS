@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 function SB2() {
     return (
         <>
-              <div id="container">
+          <div id="container">
         <header className="p-1  bg-[#fefeff] text-[#546e7b]">
           <nav className="pb-1 flex flex-row items-center justify-around" style={{boxShadow: '0px 3px 10px 0px rgba(0, 0, 0, 0.1)'}}>
             <Link to="/home"><img className="h-[60px] w-auto" src={HeaderLogoLight} alt="Lakbay SBHS logo" /></Link>
