@@ -7,7 +7,7 @@ import SB1 from './pages/SB1.tsx';
 import SB2 from './pages/SB2.tsx';
 import HB from './pages/HB.tsx';
 import Mathay from './pages/Mathay.tsx';
-import NB from './pages/NB.tsx';
+import NB1 from './mapComponents/buildings/NewBuilding/Floor1/NB1.tsx'
 import Court from './pages/Court.tsx';
 
 
@@ -23,7 +23,7 @@ function App() {
         <Route path="/map/sb2" element={<SB2 />} />
         <Route path="/map/hb" element={<HB />} />
         <Route path="/map/mathay" element={<Mathay />} />
-        <Route path="/map/nb" element={<NB />} />
+        <Route path="/map/nb" element={<NB1 />} />
         <Route path="/map/court" element={<Court />} />
       </Routes>
     </>
