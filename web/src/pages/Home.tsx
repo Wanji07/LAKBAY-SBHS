@@ -1,9 +1,6 @@
 import '../index.css';
-import HeaderLogoLight from '../assets/HeaderLogoLight.png';
 import FooterLogo from '../assets/HeaderLogo.png'
 import FacebookLogoLight from '../assets/facebookLogoLight.png';
-import FacebookLogoDark from '../assets/facebookLogoDark.png';
-import GalleryIcon from '../assets/galleryIcon.png';
 import HeroBackground from '../assets/HeroBackground.png';
 import ImageCarousel from '../ImageCarousel';
 import MapIcon from '../assets/mapIcon.png';
@@ -11,52 +8,21 @@ import NavIcon from '../assets/navIcon.png';
 import SearchIcon from '../assets/searchIcon.png';
 import feedbackIcon from '../assets/feedbackIcon.png';
 import { Link } from 'react-router-dom';
+import Navbar from '../Navbar';
 
 
 function Home() {
   return (
     <>
       <div id="container">
-        <header className="p-1  bg-[#fefeff] text-[#546e7b]">
-          <nav className="pb-1 flex flex-row items-center justify-around" style={{boxShadow: '0px 3px 10px 0px rgba(0, 0, 0, 0.1)'}}>
-            <Link to="/home"><img className="h-[60px] w-auto" src={HeaderLogoLight} alt="Lakbay SBHS logo" /></Link>
-            <ul className="-m-6.25 flex flex-row justify-center gap-[3em] text-lg" id="navBtnContainer">
-              <li>
-                <Link to="/home">Home</Link>
-              </li>
-              <li>
-                <Link to="/map">Map</Link>
-              </li>
-              <li>
-                <Link to="/buildings">Buildings & Faculties</Link>
-              </li>
-              <li>
-                <Link to="/">About</Link>
-              </li>
-            </ul>
-            <ul className="flex flex-row items-center gap-8" id="navBtnContainer2">
-              <li>
-                <Link to="/" className="flex flex-row items-center gap-2">
-                  <img src={GalleryIcon} className="h-6 w-auto filter-navy" />
-                  <h2 className="font-medium text-[#1c4587]">Gallery</h2>
-                </Link>
-              </li>
-              <li>
-                <Link to="/" className="flex flex-row items-center gap-2">
-                  <img src={FacebookLogoDark} className="h-6 w-auto" />
-                  <h2 className="font-medium text-[#1c4587]">Visit our Page</h2>
-                </Link>
-              </li>
-            </ul>
-          </nav>
-        </header>
+        <Navbar />
         <main className="h-[60vh] flex flex-row items-center justify-around overflow-hidden relative">
-          <section id="heroSection" className="text-left flex flex-col gap-5">
+          <section id="heroSection" className="text-center lg:text-left flex flex-col gap-5">
             <div className="max-h-[60vh] absolute inset-0 bg-cover bg-center -z-10 opacity-20" style={{backgroundImage: `url(${HeroBackground})`}}></div>
-              <div id="ctaContainer" className="m-auto flex flex-col gap-1.5 justify-center align-center">
-                <h1 className="text-4xl font-semibold">Find Your Way Around</h1>
-                <h2 className="text-4xl font-bold">San Bartolome High School</h2>
-                <h3 className="text-2xl font-light max-w-[25em] text-justify">A web-based map system that helps students easily locate rooms, offices, and facilities inside the campus.</h3>
+              <div id="ctaContainer" className="flex flex-col gap-1.5 justify-center align-center">
+                <h1 className="text-xl lg:text-4xl font-semibold">Find Your Way Around</h1>
+                <h2 className="text-xl lg:text-4xl font-bold">San Bartolome High School</h2>
+                <h3 className="text-md lg:text-2xl font-light max-w-[25em] lg:text-justify">A web-based map system that helps students easily locate rooms, offices, and facilities inside the campus.</h3>
               </div>
             <div id="heroBtnContainer" className="flex flex-row gap-5">
               <Link to="/map">
@@ -65,7 +31,7 @@ function Home() {
                 </button>
               </Link>
             </div>
-            <div id="heroFooter" className="flex flex-col gap-2">
+            <div id="heroFooter" className="hidden lg:block flex flex-col gap-2">
               <h3>Also available in Java version</h3>
               <Link to="/">
                 <button className="bg-[#4a6fb1] hover:bg-[#26539c] text-white font-bold py-2 px-4 rounded inline-flex items-center">
@@ -75,7 +41,7 @@ function Home() {
               </Link>
             </div>
           </section>
-          <section>
+          <section className="hidden lg:block">
             <ImageCarousel />
           </section>
         </main>

@@ -44,8 +44,6 @@ function NB() {
           </nav>
         </header>
 
-        {/* Main content will go here */}
-
         <footer id="footerContainer" className="mt-20 flex flex-row justify-around items-center p-5 bg-[#4a6fb1] text-[#fefeff]" style={{boxShadow: '0px -2px 8px 0px rgba(0, 0, 0, 0.1)'}}>
           <section id="footerLeftContainer" className="flex flex-col gap-3 items-start justify-start">
             <img src={FooterLogo} className="max-h-15 w-auto" alt="Lakbay SBHS Logo" />
