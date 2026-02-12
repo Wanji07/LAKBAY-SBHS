@@ -28,8 +28,8 @@ function NB1() {
             <img src={NB1_Restroom} className="cursor-pointer" style={{
                 position: 'absolute',
                 top: 40,
-                left: -350,
-                width: '55%',
+                left: 40,
+                width: 'auto',
                 height: '55%',
                 zIndex: 2,
                 pointerEvents: 'auto'
@@ -37,8 +37,8 @@ function NB1() {
             <img src={NB101} className="cursor-pointer" style={{
                 position: 'absolute',
                 top: 40,
-                left: -210,
-                width: '55%',
+                left: 130,
+                width: 'auto',
                 height: '55%',
                 zIndex: 3,
                 pointerEvents: 'auto'
@@ -46,8 +46,8 @@ function NB1() {
             <img src={NB102} className="cursor-pointer" style={{
                 position: 'absolute',
                 top: 40,
-                left: -20,
-                width: '55%',
+                left: 320,
+                width: 'auto',
                 height: '55%',
                 zIndex: 4,
                 pointerEvents: 'auto'
@@ -55,8 +55,8 @@ function NB1() {
             <img src={NB103} className="cursor-pointer" style={{
                 position: 'absolute',
                 top: 40,
-                left: 170,
-                width: '55%',
+                left: 510,
+                width: 'auto',
                 height: '55%',
                 zIndex: 5,
                 pointerEvents: 'auto'
@@ -64,18 +64,17 @@ function NB1() {
             <img src={NB104} className="cursor-pointer" style={{
                 position: 'absolute',
                 top: 40,
-                left: 650,
-                width: '55%',
+                left: 1020,
+                width: 'auto',
                 height: '55%',
                 zIndex: 6,
                 pointerEvents: 'auto'
             }} />
-            /*
             <img src={NB105} className="cursor-pointer" style={{
                 position: 'absolute',
                 top: 40,
-                left: 840,
-                width: '55%',
+                left: 1210,
+                width: 'auto',
                 height: '55%',
                 zIndex: 7,
                 pointerEvents: 'auto'
@@ -83,8 +82,8 @@ function NB1() {
             <img src={NB106} className="cursor-pointer" style={{
                 position: 'absolute',
                 top: 40,
-                left: 1030,
-                width: '55%',
+                left: 1400,
+                width: 'auto',
                 height: '55%',
                 zIndex: 8,
                 pointerEvents: 'auto'

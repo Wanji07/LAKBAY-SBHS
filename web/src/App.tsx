@@ -8,6 +8,9 @@ import SB2 from './pages/SB2.tsx';
 import HB from './pages/HB.tsx';
 import Mathay from './pages/Mathay.tsx';
 import NB1 from './mapComponents/buildings/NewBuilding/Floor1/NB1.tsx'
+import NB2 from './mapComponents/buildings/NewBuilding/Floor2/NB2.tsx'
+import NB3 from './mapComponents/buildings/NewBuilding/Floor3/NB3.tsx'
+import NB4 from './mapComponents/buildings/NewBuilding/Floor4/NB4.tsx'
 import Court from './pages/Court.tsx';
 
 
@@ -23,7 +26,10 @@ function App() {
         <Route path="/map/sb2" element={<SB2 />} />
         <Route path="/map/hb" element={<HB />} />
         <Route path="/map/mathay" element={<Mathay />} />
-        <Route path="/map/nb" element={<NB1 />} />
+        <Route path="/map/nb/floor1" element={<NB1 />} />
+        <Route path="/map/nb/floor2" element={<NB2 />} />
+        <Route path="/map/nb/floor3" element={<NB3 />} />
+        <Route path="/map/nb/floor4" element={<NB4 />} />
         <Route path="/map/court" element={<Court />} />
       </Routes>
     </>
