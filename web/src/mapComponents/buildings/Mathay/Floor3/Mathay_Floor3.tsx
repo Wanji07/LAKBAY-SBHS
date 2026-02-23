@@ -12,8 +12,9 @@ function Mathay_Floor3() {
         <>
             <div id="container" style={{
                 position: 'relative',
-                width: '1611px', 
-                height: '558px',
+                width: '100%',
+                maxWidth: '1611px',
+                aspectRatio: '1611 / 558',
                 margin: '0 auto'
             }}>
                 <img src={Base} style={{
@@ -27,66 +28,52 @@ function Mathay_Floor3() {
                 }} />
                 <img src={MT301} className="cursor-pointer" style={{
                     position: 'absolute',
-                    top: 50,
-                    left: 20,
-                    width: 'auto',
+                    top: '9%',
+                    left: '1%',
                     height: '55%',
-                    zIndex: 2,
-                    pointerEvents: 'auto'
+                    zIndex: 2
                 }} />
                 <img src={MT302} className="cursor-pointer" style={{
                     position: 'absolute',
-                    top: 50,
-                    left: 310,
-                    width: 'auto',
+                    top: '9%',
+                    left: '19%',
                     height: '55%',
-                    zIndex: 3,
-                    pointerEvents: 'auto'
+                    zIndex: 3
                 }} />
                 <img src={MT303} className="cursor-pointer" style={{
                     position: 'absolute',
-                    top: 50,
-                    right: 305,
-                    width: 'auto',
+                    top: '9%',
+                    right: '19%',
                     height: '55%',
-                    zIndex: 4,
-                    pointerEvents: 'auto'
+                    zIndex: 4
                 }} />
                 <img src={MT304} className="cursor-pointer" style={{
                     position: 'absolute',
-                    top: 50,
-                    right: 15,
-                    width: 'auto',
+                    top: '9%',
+                    right: '1%',
                     height: '55%',
-                    zIndex: 5,
-                    pointerEvents: 'auto'
+                    zIndex: 5
                 }} />
                 <img src={SHS_Faculty1} className="cursor-pointer" style={{
                     position: 'absolute',
-                    top: 50,
-                    right: 590,
-                    width: 'auto',
+                    top: '9%',
+                    right: '36.5%',
                     height: '55%',
-                    zIndex: 5,
-                    pointerEvents: 'auto'
+                    zIndex: 5
                 }} />
                 <img src={SHS_Faculty2} className="cursor-pointer" style={{
                     position: 'absolute',
-                    bottom: 50,
-                    right: 15,
-                    width: 'auto',
+                    bottom: '9%',
+                    right: '1%',
                     height: '27%',
-                    zIndex: 5,
-                    pointerEvents: 'auto'
+                    zIndex: 5
                 }} />
                 <img src={TLE_Faculty} className="cursor-pointer" style={{
                     position: 'absolute',
-                    top: 50,
-                    left: 595,
-                    width: 'auto',
+                    top: '9%',
+                    left: '37%',
                     height: '55%',
-                    zIndex: 5,
-                    pointerEvents: 'auto'
+                    zIndex: 5
                 }} />
             </div>
         </>

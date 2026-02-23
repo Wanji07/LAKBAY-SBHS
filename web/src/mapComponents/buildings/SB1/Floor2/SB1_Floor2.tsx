@@ -11,10 +11,11 @@ function SB1_Floor2() {
     return(
         <>
         <div id="container" style={{
-            position: 'relative',
-            width: '1611px', 
-            height: '558px',
-            margin: '0 auto'
+                position: 'relative',
+                width: '100%',
+                maxWidth: '1611px',
+                aspectRatio: '1611 / 558',
+                margin: '0 auto'
         }}>
             <img src={Base} style={{
                 position: 'absolute',
@@ -27,66 +28,52 @@ function SB1_Floor2() {
             }} />
             <img src={sb301} className="cursor-pointer" style={{
                 position: 'absolute',
-                top: 50,
-                left: 20,
-                width: 'auto',
+                top: '9%',
+                left: '1%',
                 height: '55%',
-                zIndex: 2,
-                pointerEvents: 'auto'
+                zIndex: 2
             }} />
             <img src={sb302} className="cursor-pointer" style={{
                 position: 'absolute',
-                top: 50,
-                left: 305,
-                width: 'auto',
+                top: '9%',
+                left: '19%',
                 height: '55%',
-                zIndex: 3,
-                pointerEvents: 'auto'
+                zIndex: 3
             }} />
             <img src={sb303} className="cursor-pointer" style={{
                 position: 'absolute',
-                top: 50,
-                left: 1030,
-                width: 'auto',
+                top: '9%',
+                left: '64%',
                 height: '55%',
-                zIndex: 4,
-                pointerEvents: 'auto'
+                zIndex: 4
             }} />
             <img src={sb304} className="cursor-pointer" style={{
                 position: 'absolute',
-                top: 50,
-                right: 15,
-                width: 'auto',
+                top: '9%',
+                right: '1%',
                 height: '55%',
-                zIndex: 5,
-                pointerEvents: 'auto'
+                zIndex: 5
             }} />
             <img src={sb1_ap} className="cursor-pointer" style={{
                 position: 'absolute',
-                top: 50,
-                left: 590,
-                width: 'auto',
+                top: '9%',
+                left: '37%',
                 height: '55%',
-                zIndex: 6,
-                pointerEvents: 'auto'
+                zIndex: 6
             }} />
             <img src={sb1_ap2} className="cursor-pointer" style={{
                 position: 'absolute',
-                top: 50,
-                left: 940,
-                width: 'auto',
+                top: '9%',
+                left: '58%',
                 height: '55%',
-                zIndex: 6,
-                pointerEvents: 'auto'
+                zIndex: 6
             }} />
             <img src={sb1_esp} className="cursor-pointer" style={{
                 position: 'absolute',
-                bottom: 50,
-                left: 20,
-                width: 'auto',
+                bottom: '9%',
+                left: '1%',
                 height: '27%',
-                zIndex: 6,
-                pointerEvents: 'auto'
+                zIndex: 6
             }} />
         </div>
         </>

@@ -10,10 +10,11 @@ function SB1_Floor1() {
     return(
         <>
         <div id="container" style={{
-            position: 'relative',
-            width: '1611px', 
-            height: '558px',
-            margin: '0 auto'
+                position: 'relative',
+                width: '100%',
+                maxWidth: '1611px',
+                aspectRatio: '1611 / 558',
+                margin: '0 auto'
         }}>
             <img src={Base} style={{
                 position: 'absolute',
@@ -26,48 +27,38 @@ function SB1_Floor1() {
             }} />
             <img src={RestroomWomen} className="cursor-pointer" style={{
                 position: 'absolute',
-                top: 50,
-                left: 590,
-                width: 'auto',
+                top: '9%',
+                left: '37%',
                 height: '55%',
-                zIndex: 2,
-                pointerEvents: 'auto'
+                zIndex: 2
             }} />
             <img src={RestroomMen} className="cursor-pointer" style={{
                 position: 'absolute',
-                top: 50,
-                left: 940,
-                width: 'auto',
+                top: '9%',
+                left: '58%',
                 height: '55%',
-                zIndex: 3,
-                pointerEvents: 'auto'
+                zIndex: 3
             }} />
             <img src={Comlab} className="cursor-pointer" style={{
                 position: 'absolute',
-                top: 50,
-                left: 1030,
-                width: 'auto',
+                top: '9%',
+                left: '64%',
                 height: '55%',
-                zIndex: 4,
-                pointerEvents: 'auto'
+                zIndex: 4
             }} />
             <img src={AVR} className="cursor-pointer" style={{
                 position: 'absolute',
-                top: 50,
-                left: 20,
-                width: 'auto',
+                top: '9%',
+                left: '1%',
                 height: '55%',
-                zIndex: 5,
-                pointerEvents: 'auto'
+                zIndex: 5
             }} />
             <img src={TLE} className="cursor-pointer" style={{
                 position: 'absolute',
-                bottom: 50,
-                left: 1030,
-                width: 'auto',
+                bottom: '9%',
+                left: '64%',
                 height: '27%',
-                zIndex: 6,
-                pointerEvents: 'auto'
+                zIndex: 6
             }} />
         </div>
         </>

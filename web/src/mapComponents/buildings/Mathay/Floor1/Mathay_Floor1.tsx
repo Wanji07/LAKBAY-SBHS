@@ -10,14 +10,19 @@ import MAPEH from './MAPEH_FACULTY.svg'
 
 function Mathay_Floor1() {
     return(
-        <>
-            <div id="container" style={{
+        <div
+            id="container"
+            style={{
                 position: 'relative',
-                width: '1611px', 
-                height: '558px',
+                width: '100%',
+                maxWidth: '1611px',
+                aspectRatio: '1611 / 558',
                 margin: '0 auto'
-            }}>
-                <img src={Base} style={{
+            }}
+        >
+            <img
+                src={Base}
+                style={{
                     position: 'absolute',
                     top: 0,
                     left: 0,
@@ -25,81 +30,73 @@ function Mathay_Floor1() {
                     height: '100%',
                     zIndex: 1,
                     pointerEvents: 'none'
-                }} />
-                <img src={Girls_Restroom} className="cursor-pointer" style={{
-                    position: 'absolute',
-                    top: 50,
-                    left: 585,
-                    width: 'auto',
-                    height: '55%',
-                    zIndex: 2,
-                    pointerEvents: 'auto'
-                }} />
-                <img src={Boys_Restroom} className="cursor-pointer" style={{
-                    position: 'absolute',
-                    top: 50,
-                    right: 590,
-                    width: 'auto',
-                    height: '55%',
-                    zIndex: 3,
-                    pointerEvents: 'auto'
-                }} />
-                <img src={Coop} className="cursor-pointer" style={{
-                    position: 'absolute',
-                    top: 50,
-                    right: 30,
-                    width: 'auto',
-                    height: '55%',
-                    zIndex: 4,
-                    pointerEvents: 'auto'
-                }} />
-                <img src={Ehemplo} className="cursor-pointer" style={{
-                    position: 'absolute',
-                    top: 50,
-                    right: 310,
-                    width: 'auto',
-                    height: '55%',
-                    zIndex: 5,
-                    pointerEvents: 'auto'
-                }} />
-                <img src={Finance} className="cursor-pointer" style={{
-                    position: 'absolute',
-                    top: 50,
-                    left: 15,
-                    width: 'auto',
-                    height: '55%',
-                    zIndex: 5,
-                    pointerEvents: 'auto'
-                }} />
-                <img src={Paragon} className="cursor-pointer" style={{
-                    position: 'absolute',
-                    top: 50,
-                    right: 450,
-                    width: 'auto',
-                    height: '55%',
-                    zIndex: 5,
-                    pointerEvents: 'auto'
-                }} />
-                <img src={Principal} className="cursor-pointer" style={{
-                    position: 'absolute',
-                    top: 50,
-                    left: 300,
-                    width: 'auto',
-                    height: '55%',
-                    zIndex: 5,
-                    pointerEvents: 'auto'
-                }} />
-                <img src={MAPEH} className="cursor-pointer" style={{
-                    position: 'absolute',
-                    top: 50,
-                    right: 170,
-                    width: 'auto',
-                    height: '55%',
-                    zIndex: 5,
-                    pointerEvents: 'auto'
-                }} />
-            </div>
-        </>
+                }}
+            />
+
+            <img src={Girls_Restroom} className="cursor-pointer" style={{
+                position: 'absolute',
+                top: '9%',
+                left: '36%',
+                height: '55%',
+                zIndex: 2
+            }} />
+
+            <img src={Boys_Restroom} className="cursor-pointer" style={{
+                position: 'absolute',
+                top: '9%',
+                right: '36.5%',
+                height: '55%',
+                zIndex: 3
+            }} />
+
+            <img src={Coop} className="cursor-pointer" style={{
+                position: 'absolute',
+                top: '9%',
+                right: '2%',
+                height: '55%',
+                zIndex: 4
+            }} />
+
+            <img src={Ehemplo} className="cursor-pointer" style={{
+                position: 'absolute',
+                top: '9%',
+                right: '19%',
+                height: '55%',
+                zIndex: 5
+            }} />
+
+            <img src={Finance} className="cursor-pointer" style={{
+                position: 'absolute',
+                top: '9%',
+                left: '1%',
+                height: '55%',
+                zIndex: 5
+            }} />
+
+            <img src={Paragon} className="cursor-pointer" style={{
+                position: 'absolute',
+                top: '9%',
+                right: '27.5%',
+                height: '55%',
+                zIndex: 5
+            }} />
+
+            <img src={Principal} className="cursor-pointer" style={{
+                position: 'absolute',
+                top: '9%',
+                left: '18.5%',
+                height: '55%',
+                zIndex: 5
+            }} />
+
+            <img src={MAPEH} className="cursor-pointer" style={{
+                position: 'absolute',
+                top: '9%',
+                right: '10.5%',
+                height: '55%',
+                zIndex: 5
+            }} />
+        </div>
     )
 }
 

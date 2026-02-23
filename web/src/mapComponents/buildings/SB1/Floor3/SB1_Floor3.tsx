@@ -13,8 +13,9 @@ function SB1_Floor3() {
         <>
         <div id="container" style={{
             position: 'relative',
-            width: '1611px', 
-            height: '558px',
+            width: '100%',
+            maxWidth: '1611px',
+            aspectRatio: '1611 / 558',
             margin: '0 auto'
         }}>
             <img src={Base} style={{
@@ -28,84 +29,66 @@ function SB1_Floor3() {
             }} />
             <img src={sb1_clinic} className="cursor-pointer" style={{
                 position: 'absolute',
-                top: 50,
-                left: 410,
-                width: 'auto',
+                top: '9%',
+                left: '25%',
                 height: '55%',
-                zIndex: 2,
-                pointerEvents: 'auto'
+                zIndex: 2
             }} />
             <img src={sb1_english} className="cursor-pointer" style={{
                 position: 'absolute',
-                top: 50,
-                left: 305,
-                width: 'auto',
+                top: '9%',
+                left: '19%',
                 height: '55%',
-                zIndex: 3,
-                pointerEvents: 'auto'
+                zIndex: 3
             }} />
             <img src={sb1_english2} className="cursor-pointer" style={{
                 position: 'absolute',
-                top: 50,
-                right: 30,
-                width: 'auto',
+                top: '9%',
+                right: '2%',
                 height: '55%',
-                zIndex: 4,
-                pointerEvents: 'auto'
+                zIndex: 4
             }} />
             <img src={sb1_esp} className="cursor-pointer" style={{
                 position: 'absolute',
-                top: 50,
-                left: 590,
-                width: 'auto',
+                top: '9%',
+                left: '36%',
                 height: '55%',
-                zIndex: 5,
-                pointerEvents: 'auto'
+                zIndex: 5
             }} />
             <img src={sb1_english} className="cursor-pointer" style={{
                 position: 'absolute',
-                top: 50,
-                right: 590,
-                width: 'auto',
+                top: '9%',
+                right: '36%',
                 height: '55%',
-                zIndex: 6,
-                pointerEvents: 'auto'
+                zIndex: 6
             }} />
             <img src={sb1_journalism} className="cursor-pointer" style={{
                 position: 'absolute',
-                top: 50,
-                left: 50,
-                width: 'auto',
+                top: '9%',
+                left: '3%',
                 height: '55%',
-                zIndex: 6,
-                pointerEvents: 'auto'
+                zIndex: 6
             }} />
             <img src={sb1_property} className="cursor-pointer" style={{
                 position: 'absolute',
-                top: 50,
-                left: 230,
-                width: 'auto',
+                top: '9%',
+                left: '14%',
                 height: '55%',
-                zIndex: 6,
-                pointerEvents: 'auto'
+                zIndex: 6
             }} />
             <img src={sb1_staff} className="cursor-pointer" style={{
                 position: 'absolute',
-                top: 50,
-                right: 410,
-                width: 'auto',
+                top: '9%',
+                right: '25%',
                 height: '55%',
-                zIndex: 6,
-                pointerEvents: 'auto'
+                zIndex: 6
             }} />
             <img src={sb1_guidance} className="cursor-pointer" style={{
                 position: 'absolute',
-                top: 50,
-                right: 230,
-                width: 'auto',
+                top: '9%',
+                right: '14%',
                 height: '55%',
-                zIndex: 6,
-                pointerEvents: 'auto'
+                zIndex: 6
             }} />
         </div>
         </>

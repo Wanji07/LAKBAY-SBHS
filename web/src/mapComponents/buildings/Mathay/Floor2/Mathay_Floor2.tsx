@@ -11,8 +11,9 @@ function Mathay_Floor2() {
         <>
             <div id="container" style={{
                 position: 'relative',
-                width: '1611px', 
-                height: '558px',
+                width: '100%',
+                maxWidth: '1611px',
+                aspectRatio: '1611 / 558',
                 margin: '0 auto'
             }}>
                 <img src={Base} style={{
@@ -26,57 +27,45 @@ function Mathay_Floor2() {
                 }} />
                 <img src={Library} className="cursor-pointer" style={{
                     position: 'absolute',
-                    top: 50,
-                    right: 295,
-                    width: 'auto',
+                    top: '9%',
+                    right: '18%',
                     height: '55%',
-                    zIndex: 2,
-                    pointerEvents: 'auto'
+                    zIndex: 2
                 }} />
                 <img src={MT201} className="cursor-pointer" style={{
                     position: 'absolute',
-                    top: 50,
-                    right: 10,
-                    width: 'auto',
+                    top: '9%',
+                    right: '1%',
                     height: '55%',
-                    zIndex: 3,
-                    pointerEvents: 'auto'
+                    zIndex: 3
                 }} />
                 <img src={MathFaculty} className="cursor-pointer" style={{
                     position: 'absolute',
-                    top: 50,
-                    left: 585,
-                    width: 'auto',
+                    top: '9%',
+                    left: '36.5%',
                     height: '55%',
-                    zIndex: 4,
-                    pointerEvents: 'auto'
+                    zIndex: 4
                 }} />
                 <img src={MT202} className="cursor-pointer" style={{
                     position: 'absolute',
-                    top: 50,
-                    left: 300,
-                    width: 'auto',
+                    top: '9%',
+                    left: '19%',
                     height: '55%',
-                    zIndex: 5,
-                    pointerEvents: 'auto'
+                    zIndex: 5
                 }} />
                 <img src={MT203} className="cursor-pointer" style={{
                     position: 'absolute',
-                    top: 50,
-                    left: 15,
-                    width: 'auto',
+                    top: '9%',
+                    left: '1%',
                     height: '55%',
-                    zIndex: 5,
-                    pointerEvents: 'auto'
+                    zIndex: 5
                 }} />
                 <img src={SHSFaculty} className="cursor-pointer" style={{
                     position: 'absolute',
-                    top: 50,
-                    right: 580,
-                    width: 'auto',
+                    top: '9%',
+                    right: '36%',
                     height: '55%',
-                    zIndex: 5,
-                    pointerEvents: 'auto'
+                    zIndex: 5
                 }} />
             </div>
         </>
