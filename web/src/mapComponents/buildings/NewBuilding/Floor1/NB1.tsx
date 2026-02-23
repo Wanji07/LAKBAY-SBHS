@@ -10,84 +10,114 @@ import NB106 from './nb106.svg'
 function NB1() {
     return(
         <>
-        <div id="container" style={{
-            position: 'relative',
-            width: '1611px', 
-            height: '558px',
-            margin: '0 auto'
-        }}>
-            <img src={NB1_Base} style={{
-                position: 'absolute',
-                top: 0,
-                left: 0,
-                width: '100%',
-                height: '100%',
+            <div
+            id="container"
+            style={{
+                position: "relative",
+                width: "100%",
+                maxWidth: "1611px",
+                aspectRatio: "1611 / 558",
+                margin: "0 auto",
+            }}
+            >
+            {/* Base */}
+            <img
+                src={NB1_Base}
+                style={{
+                position: "absolute",
+                inset: 0,
+                width: "100%",
+                height: "100%",
                 zIndex: 1,
-                pointerEvents: 'none'
-            }} />
-            <img src={NB1_Restroom} className="cursor-pointer" style={{
-                position: 'absolute',
-                top: 40,
-                left: 40,
-                width: 'auto',
-                height: '55%',
+                pointerEvents: "none",
+                }}
+            />
+
+            {/* Restroom */}
+            <img
+                src={NB1_Restroom}
+                className="cursor-pointer"
+                style={{
+                position: "absolute",
+                top: "7%",
+                left: "2.5%",
+                height: "55%",
                 zIndex: 2,
-                pointerEvents: 'auto'
-            }} />
-            <img src={NB101} className="cursor-pointer" style={{
-                position: 'absolute',
-                top: 40,
-                left: 130,
-                width: 'auto',
-                height: '55%',
+                }}
+            />
+
+            {/* NB101 */}
+            <img
+                src={NB101}
+                className="cursor-pointer"
+                style={{
+                position: "absolute",
+                top: "7%",
+                left: "8%",
+                height: "55%",
                 zIndex: 3,
-                pointerEvents: 'auto'
-            }} />
-            <img src={NB102} className="cursor-pointer" style={{
-                position: 'absolute',
-                top: 40,
-                left: 320,
-                width: 'auto',
-                height: '55%',
+                }}
+            />
+
+            {/* NB102 */}
+            <img
+                src={NB102}
+                className="cursor-pointer"
+                style={{
+                position: "absolute",
+                top: "7%",
+                left: "20%",
+                height: "55%",
                 zIndex: 4,
-                pointerEvents: 'auto'
-            }} />
-            <img src={NB103} className="cursor-pointer" style={{
-                position: 'absolute',
-                top: 40,
-                left: 510,
-                width: 'auto',
-                height: '55%',
-                zIndex: 5,
-                pointerEvents: 'auto'
-            }} />
-            <img src={NB104} className="cursor-pointer" style={{
-                position: 'absolute',
-                top: 40,
-                left: 1020,
-                width: 'auto',
-                height: '55%',
-                zIndex: 6,
-                pointerEvents: 'auto'
-            }} />
-            <img src={NB105} className="cursor-pointer" style={{
-                position: 'absolute',
-                top: 40,
-                left: 1210,
-                width: 'auto',
-                height: '55%',
-                zIndex: 7,
-                pointerEvents: 'auto'
-            }} />
-            <img src={NB106} className="cursor-pointer" style={{
-                position: 'absolute',
-                top: 40,
-                left: 1400,
-                width: 'auto',
-                height: '55%',
-                zIndex: 8,
-                pointerEvents: 'auto'
-            }} />
+                }}
+            />
+        <img
+        src={NB103}
+        className="cursor-pointer"
+        style={{
+            position: "absolute",
+            top: "7.2%",
+            left: "31.7%",
+            height: "55%",
+            zIndex: 5,
+        }}
+        />
+
+        <img
+        src={NB104}
+        className="cursor-pointer"
+        style={{
+            position: "absolute",
+            top: "7.2%",
+            left: "63.3%",
+            height: "55%",
+            zIndex: 6,
+        }}
+        />
+
+        <img
+        src={NB105}
+        className="cursor-pointer"
+        style={{
+            position: "absolute",
+            top: "7.2%",
+            left: "75.1%",
+            height: "55%",
+            zIndex: 7,
+        }}
+        />
+
+        <img
+        src={NB106}
+        className="cursor-pointer"
+        style={{
+            position: "absolute",
+            top: "7.2%",
+            left: "86.9%",
+            height: "55%",
+            zIndex: 8,
+        }}
+        />
         </div>
         </>
     )

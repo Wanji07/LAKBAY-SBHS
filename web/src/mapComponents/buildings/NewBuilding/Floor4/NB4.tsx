@@ -11,94 +11,124 @@ import NB406 from './nb406.svg'
 function NB4() {
 	return(
 		<>
-		<div id="container" style={{
-			position: 'relative',
-			width: '1611px',
-			height: '558px',
-			margin: '0 auto'
-		}}>
-			<img src={NB4_Base} style={{
-				position: 'absolute',
-				top: 0,
-				left: 0,
-				width: '100%',
-				height: '100%',
+			<div
+			id="container"
+			style={{
+				position: "relative",
+				width: "100%",
+				maxWidth: "1611px",
+				aspectRatio: "1611 / 558",
+				margin: "0 auto",
+			}}
+			>
+			<img
+				src={NB4_Base}
+				style={{
+				position: "absolute",
+				inset: 0,
+				width: "100%",
+				height: "100%",
 				zIndex: 1,
-				pointerEvents: 'none'
-			}} />
-			<img src={NB4_Restroom} className="cursor-pointer" style={{
-				position: 'absolute',
-				top: 40,
-				left: 25,
-				width: 'auto',
-				height: '55%',
+				pointerEvents: "none",
+				}}
+			/>
+
+			<img
+				src={NB4_Restroom}
+				className="cursor-pointer"
+				style={{
+				position: "absolute",
+				top: "7.2%",
+				left: "1.6%",
+				height: "55%",
 				zIndex: 2,
-				pointerEvents: 'auto'
-			}} />
-			<img src={NB4_FIL_Department} className="cursor-pointer" style={{
-				position: 'absolute',
-				top: 40,
-				left: 115,
-				width: 'auto',
-				height: '55%',
+				}}
+			/>
+
+			<img
+				src={NB4_FIL_Department}
+				className="cursor-pointer"
+				style={{
+				position: "absolute",
+				top: "7.2%",
+				left: "7.1%",
+				height: "55%",
 				zIndex: 3,
-				pointerEvents: 'auto'
-			}} />
-			<img src={NB401} className="cursor-pointer" style={{
-				position: 'absolute',
-				top: 40,
-				left: 205,
-				width: 'auto',
-				height: '55%',
+				}}
+			/>
+
+			<img
+				src={NB401}
+				className="cursor-pointer"
+				style={{
+				position: "absolute",
+				top: "7.2%",
+				left: "12.7%",
+				height: "55%",
 				zIndex: 4,
-				pointerEvents: 'auto'
-			}} />
-			<img src={NB402} className="cursor-pointer" style={{
-				position: 'absolute',
-				top: 40,
-				left: 385,
-				width: 'auto',
-				height: '55%',
+				}}
+			/>
+
+			<img
+				src={NB402}
+				className="cursor-pointer"
+				style={{
+				position: "absolute",
+				top: "7.2%",
+				left: "23.9%",
+				height: "55%",
 				zIndex: 5,
-				pointerEvents: 'auto'
-			}} />
-			<img src={NB403} className="cursor-pointer" style={{
-				position: 'absolute',
-				top: 40,
-				left: 565,
-				width: 'auto',
-				height: '55%',
+				}}
+			/>
+
+			<img
+				src={NB403}
+				className="cursor-pointer"
+				style={{
+				position: "absolute",
+				top: "7.2%",
+				left: "35.1%",
+				height: "55%",
 				zIndex: 6,
-				pointerEvents: 'auto'
-			}} />
-			<img src={NB404} className="cursor-pointer" style={{
-				position: 'absolute',
-				top: 40,
-				left: 1035,
-				width: 'auto',
-				height: '55%',
+				}}
+			/>
+
+			<img
+				src={NB404}
+				className="cursor-pointer"
+				style={{
+				position: "absolute",
+				top: "7.2%",
+				left: "64.3%",
+				height: "55%",
 				zIndex: 7,
-				pointerEvents: 'auto'
-			}} />
-			<img src={NB405} className="cursor-pointer" style={{
-				position: 'absolute',
-				top: 40,
-				left: 1220,
-				width: 'auto',
-				height: '55%',
+				}}
+			/>
+
+			<img
+				src={NB405}
+				className="cursor-pointer"
+				style={{
+				position: "absolute",
+				top: "7.2%",
+				left: "75.7%",
+				height: "55%",
 				zIndex: 8,
-				pointerEvents: 'auto'
-			}} />
-			<img src={NB406} className="cursor-pointer" style={{
-				position: 'absolute',
-				top: 40,
-				left: 1405,
-				width: 'auto',
-				height: '55%',
+				}}
+			/>
+
+			<img
+				src={NB406}
+				className="cursor-pointer"
+				style={{
+				position: "absolute",
+				top: "7.2%",
+				left: "87.2%",
+				height: "55%",
 				zIndex: 9,
-				pointerEvents: 'auto'
-			}} />
-		</div>
+				}}
+			/>
+			</div>
 		</>
 	)
 }
