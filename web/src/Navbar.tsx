@@ -32,21 +32,21 @@ function Navbar() {
         <li><Link to="/home">Home</Link></li>
         <li><Link to="/map">Map</Link></li>
         <li><Link to="/buildings">Buildings & Faculties</Link></li>
-        <li><Link to="/">About</Link></li>
+        <li><Link to="/404">About</Link></li>
       </ul>
       <ul 
         className="hidden lg:flex flex-row items-center gap-8"
         id="navBtnContainer2"
       >
         <li>
-          <Link to="/" className="flex items-center gap-2">
+          <Link to="/404" className="flex items-center gap-2">
             <img src={GalleryIcon} className="h-6 w-auto filter-navy" />
             <h2 className="font-medium text-[#1c4587]">Gallery</h2>
           </Link>
         </li>
 
         <li>
-          <Link to="/" className="flex items-center gap-2">
+          <Link to="/404" className="flex items-center gap-2">
             <img src={FacebookLogoDark} className="h-6 w-auto" />
             <h2 className="font-medium text-[#1c4587]">Visit our Page</h2>
           </Link>

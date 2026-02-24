@@ -32,7 +32,7 @@ function Home() {
             </div>
             <div id="heroFooter" className="hidden lg:block flex flex-col gap-2">
               <h3>Also available in Java version</h3>
-              <Link to="/">
+              <Link to="/404">
                 <button className="bg-[#4a6fb1] hover:bg-[#26539c] text-white font-bold py-2 px-4 rounded inline-flex items-center">
                   <svg className="fill-current w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z"/></svg>
                   <span>Download</span>
@@ -103,7 +103,7 @@ function Home() {
           <div id="feedbackContentContainer" className="flex flex-col justify-center items-center gap-8">
             <h3 className="text-lg font-medium text-[#222222ea] text-center max-w-3xl">Share your experience navigating San Bartolome High School. Your insights will help shape the development of the LAKBAY system.</h3>
             <button className="w-[80vh] bg-[#4a6fb1] hover:bg-[#26539c] text-white font-bold py-2 px-4 rounded-xs">
-              <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&list=RDdQw4w9WgXcQ&start_radio=1"><h2>SHARE YOUR FEEDBACK</h2></a>
+              <Link to="/404"><h2>SHARE YOUR FEEDBACK</h2></Link>
             </button>
             <p className="-mt-5 text-[#2222229f]">* For research and system development purposes only.</p>
           </div>

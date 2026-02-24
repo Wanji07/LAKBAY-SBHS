@@ -16,7 +16,7 @@ function Map() {
         <>
         <div id="container">
             <Navbar />
-            <main className="grid grid-cols-[1fr_2fr] h-screen text-[#fefeff]" >
+            <main className="grid grid-cols-[1fr_10fr] h-screen text-[#fefeff]" >
                 <aside className="bg-[#1c4587] max-w-[40vh] flex flex-col gap-5 px-5 pt-5" style={{boxShadow: '0px 4px 10px 0px rgba(0, 0, 0, 0.5)'}}>
                     <h1 className="font-bold text-2xl">Explore Campus</h1>
                     <div id="searchInputContainer" className="flex items-center bg-[#4a6fb1] rounded-sm border border-[#1c4587] focus-within:ring-2 focus-within:ring-[#1c4587] focus-within:border-transparent overflow-hidden">
@@ -55,7 +55,7 @@ function Map() {
                     </div>
                 </aside>
                 <section className="relative">
-                    <div id="mapContainer" className="flex justify-center items-center w-6xl h-auto mt-50">
+                    <div id="mapContainer" className="absolute top-1/2 left-1/3-translate-x-1/2 -translate-y-1/2 w-full h-full flex justify-center items-center">
                         <MapCanvas />
                     </div>
                 </section>

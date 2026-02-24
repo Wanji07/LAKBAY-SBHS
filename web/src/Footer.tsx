@@ -21,16 +21,16 @@ function Footer() {
             <h2 className="mb-2 text-[#fefeff] font-semibold">Quick Links</h2>
               <ul className="flex flex-col gap-2">
                 <li className="text-[#fefeffda]"><Link to="/home">Home</Link></li>
-                <li className="text-[#fefeffda]"><Link to="/">Map</Link></li>
-                <li className="text-[#fefeffda]"><Link to="/">About Project</Link></li>
+                <li className="text-[#fefeffda]"><Link to="/map">Map</Link></li>
+                <li className="text-[#fefeffda]"><Link to="/404">About Project</Link></li>
               </ul>
             </div>
             <div>
             <h2 className="mb-2 text-[#fefeff] font-semibold">Miscellaneous</h2>
               <ul className="flex flex-col gap-2">
                 <li className="text-[#fefeffda]"><Link to="/home">Meet the Team</Link></li>
-                <li className="text-[#fefeffda]"><Link to="/">Contact Us</Link></li>
-                <li className="text-[#fefeffda]"><Link to="/">Gallery</Link></li>
+                <li className="text-[#fefeffda]"><Link to="/404">Contact Us</Link></li>
+                <li className="text-[#fefeffda]"><Link to="/404">Gallery</Link></li>
               </ul>
             </div>
           </section>

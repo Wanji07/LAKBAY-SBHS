@@ -48,7 +48,7 @@ function BuildingsCard() {
                         </div>
                         
                         <div className="absolute bottom-4 left-6 right-6">
-                            <button className="w-full px-4 py-2.5 bg-gradient-to-r from-[#4a6fb1] to-[#1c4587] text-white text-sm font-semibold rounded-lg hover:from-[#1c4587] hover:to-[#4a6fb1] transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-105">
+                            <button className="w-full px-4 py-2.5 bg-gradient-to-r from-[#4a6fb1] to-[#1c4587] text-white text-sm font-semibold rounded-lg hover:from-[#1c4587] hover:to-[#4a6fb1] transition-all duration-300 shadow-md hover:shadow-lg hover:cursor-not-allowed transform hover:scale-105">
                                 View Details
                             </button>
                         </div>

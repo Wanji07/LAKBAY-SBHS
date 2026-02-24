@@ -8,9 +8,12 @@ import Floor4 from '../mapComponents/buildings/SB2/Floor4/SB2_Floor4'
 import nextFloorIcon from '../assets/nextFloor.svg'
 import previousFloorIcon from '../assets/previousFloor.svg'
 import { useState, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
+import Aside from '../MapAside'
 
 function SB2() {
 
+    const navigate = useNavigate();
     const floors = [
       Floor1,
       Floor2,
@@ -34,9 +37,17 @@ function SB2() {
     return (
         <>
         <Navbar />
-          <div id="container" className="min-h-screen flex flex-col">
+        <div id="container" className="min-h-screen grid grid-cols-[1fr_10fr]">
+          <Aside />
           <section id="mapContainer" className="flex flex-row justify-center items-center gap-5 my-auto">
-            <div className='w-full max-w-250.75'>
+            <div className="flex flex-col items-center w-full max-w-250.75">
+              <button
+                onClick={() => navigate('/map')}
+                className="mb-4 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded shadow transition-colors duration-200 self-start"
+                aria-label="Back to Map"
+              >
+                ← Back to Map
+              </button>
               <CurrentFloorComponent />
             </div>
             <div id="buttonContainer" className="flex flex-col items-center justify-center gap-6 my-8">

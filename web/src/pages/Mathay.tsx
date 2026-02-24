@@ -1,6 +1,9 @@
+
 import Navbar from '../Navbar'
 import Footer from '../Footer'
-import { useState, useEffect} from 'react'
+import Aside from '../MapAside'
+import { useState, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
 import Floor1 from '../mapComponents/buildings/Mathay/Floor1/Mathay_Floor1'
 import Floor2 from '../mapComponents/buildings/Mathay/Floor2/Mathay_Floor2'
 import Floor3 from '../mapComponents/buildings/Mathay/Floor3/Mathay_Floor3'
@@ -10,31 +13,41 @@ import previousFloorIcon from '../assets/previousFloor.svg'
 
 function Mathay() {
 
+    const navigate = useNavigate();
     const floors = [
       Floor1,
       Floor2,
       Floor3,
-    ]
+    ];
 
     const [currentFloor, setFloor] = useState(0);
 
     const handlePreviousFloor = () => {
       setFloor(
-        currentFloor === 0 ? floors.length - 1 : currentFloor - 1 );
-    }
+        currentFloor === 0 ? floors.length - 1 : currentFloor - 1
+      );
+    };
 
     const handleNextFloor = () => {
-      setFloor((currentFloor + 1) % floors.length)
-    }
+      setFloor((currentFloor + 1) % floors.length);
+    };
 
     const CurrentFloorComponent = floors[currentFloor];
 
     return (
       <>
         <Navbar />
-          <div id="container" className="min-h-screen flex flex-col">
+        <div id="container" className="min-h-screen grid grid-cols-[1fr_10fr]">
+          <Aside />
           <section id="mapContainer" className="flex flex-row justify-center items-center gap-5 my-auto">
-            <div className='w-full max-w-250.75'>
+            <div className="flex flex-col items-center w-full max-w-250.75">
+              <button
+                onClick={() => navigate('/map')}
+                className="mb-4 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded shadow transition-colors duration-200 self-start"
+                aria-label="Back to Map"
+              >
+                ← Back to Map
+              </button>
               <CurrentFloorComponent />
             </div>
             <div id="buttonContainer" className="flex flex-col items-center justify-center gap-6 my-8">
@@ -59,7 +72,7 @@ function Mathay() {
         </div>
         <Footer />
       </>
-    )
+    );
 }
 
 export default Mathay
