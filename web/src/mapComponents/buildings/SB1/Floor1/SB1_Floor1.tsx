@@ -35,7 +35,7 @@ function SB1_Floor1() {
             <img src={RestroomMen} className="cursor-pointer" style={{
                 position: 'absolute',
                 top: '9%',
-                left: '58%',
+                left: '58.5%',
                 height: '55%',
                 zIndex: 3
             }} />

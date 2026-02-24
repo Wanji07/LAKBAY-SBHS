@@ -6,47 +6,51 @@ import REGISTRAR from './SB2-REGISTRAR.svg'
 function SB2_Floor1() {
     return(
         <>
-        <div id="container" style={{
-            position: 'relative',
-            width: '1611px', 
-            height: '558px',
-            margin: '0 auto'
-        }}>
-            <img src={Base} style={{
-                position: 'absolute',
-                top: 0,
-                left: 0,
+         <div
+            id="container"
+            style={{
+                position: 'relative',
                 width: '100%',
-                height: '100%',
-                zIndex: 1,
-                pointerEvents: 'none'
-            }} />
+                maxWidth: '1611px',
+                aspectRatio: '1611 / 558',
+                margin: '0 auto'
+            }}
+        >
+            <img
+                src={Base}
+                style={{
+                    position: 'absolute',
+                    top: 0,
+                    left: 0,
+                    width: '100%',
+                    height: '100%',
+                    zIndex: 1,
+                    pointerEvents: 'none'
+                }}
+            />
+
             <img src={ALS} className="cursor-pointer" style={{
                 position: 'absolute',
-                top: 30,
-                left: 360,
-                width: 'auto',
+                top: '5%',
+                left: '22%',
                 height: '55%',
-                zIndex: 2,
-                pointerEvents: 'auto'
+                zIndex: 2
             }} />
+
             <img src={DRRM} className="cursor-pointer" style={{
                 position: 'absolute',
-                top: 130,
-                right: 515,
-                width: 'auto',
+                top: '23%',
+                right: '32%',
                 height: '15%',
-                zIndex: 3,
-                pointerEvents: 'auto'
+                zIndex: 3
             }} />
+
             <img src={REGISTRAR} className="cursor-pointer" style={{
                 position: 'absolute',
-                top: 30,
-                left: 650,
-                width: 'auto',
+                top: '5%',
+                left: '40%',
                 height: '55%',
-                zIndex: 4,
-                pointerEvents: 'auto'
+                zIndex: 4
             }} />
         </div>
         </>

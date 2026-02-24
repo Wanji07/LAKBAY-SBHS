@@ -64,7 +64,7 @@ function SB1_Floor2() {
             <img src={sb1_ap2} className="cursor-pointer" style={{
                 position: 'absolute',
                 top: '9%',
-                left: '58%',
+                left: '58.5%',
                 height: '55%',
                 zIndex: 6
             }} />
