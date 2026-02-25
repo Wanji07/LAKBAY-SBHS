@@ -4,7 +4,7 @@ import SB2_302 from './SB2_302.svg'
 import SB2_303 from './SB2_303.svg'
 import SB2_304 from './SB2_304.svg'
 
-function SB2_Floor3() {
+function SB2_Floor3({ onRoomClick = () => {} }: { onRoomClick?: (roomData: any) => void }) {
     return(
         <>
             <div
@@ -33,6 +33,12 @@ function SB2_Floor3() {
                 <img
                     src={SB2_301}
                     className="cursor-pointer"
+                    onClick={() =>
+                        onRoomClick({
+                            name: "SB2 301",
+                            type: "CLASSROOM"
+                        })
+                    }
                     style={{
                         position: 'absolute',
                         top: '9%',
@@ -45,6 +51,12 @@ function SB2_Floor3() {
                 <img
                     src={SB2_302}
                     className="cursor-pointer"
+                    onClick={() =>
+                        onRoomClick({
+                            name: "SB2 302",
+                            type: "CLASSROOM"
+                        })
+                    }
                     style={{
                         position: 'absolute',
                         top: '9%',
@@ -57,6 +69,12 @@ function SB2_Floor3() {
                 <img
                     src={SB2_303}
                     className="cursor-pointer"
+                    onClick={() =>
+                        onRoomClick({
+                            name: "SB2 303",
+                            type: "CLASSROOM"
+                        })
+                    }
                     style={{
                         position: 'absolute',
                         top: '9%',
@@ -69,6 +87,12 @@ function SB2_Floor3() {
                 <img
                     src={SB2_304}
                     className="cursor-pointer"
+                    onClick={() =>
+                        onRoomClick({
+                            name: "SB2 304",
+                            type: "CLASSROOM"
+                        })
+                    }
                     style={{
                         position: 'absolute',
                         top: '9%',

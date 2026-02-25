@@ -8,7 +8,7 @@ import NB404 from './nb404.svg'
 import NB405 from './nb405.svg'
 import NB406 from './nb406.svg'
 
-function NB4() {
+function NB4({ onRoomClick = () => {} }: { onRoomClick?: (roomData: any) => void }) {
 	return(
 		<>
 			<div
@@ -35,6 +35,7 @@ function NB4() {
 
 			<img
 				src={NB4_Restroom}
+                onClick={() => onRoomClick({ name: "New Building 4F Restroom", type: "Restroom"})}
 				className="cursor-pointer"
 				style={{
 				position: "absolute",
@@ -47,6 +48,7 @@ function NB4() {
 
 			<img
 				src={NB4_FIL_Department}
+				onClick={() => onRoomClick({ name: "New Building Filipino Department", type: "Faculty"})}
 				className="cursor-pointer"
 				style={{
 				position: "absolute",
@@ -60,6 +62,7 @@ function NB4() {
 			<img
 				src={NB401}
 				className="cursor-pointer"
+                onClick={() => onRoomClick({ name: "NB401", type: "Classroom"})}
 				style={{
 				position: "absolute",
 				top: "7.2%",
@@ -72,6 +75,7 @@ function NB4() {
 			<img
 				src={NB402}
 				className="cursor-pointer"
+                onClick={() => onRoomClick({ name: "NB402", type: "Classroom"})}
 				style={{
 				position: "absolute",
 				top: "7.2%",
@@ -84,6 +88,7 @@ function NB4() {
 			<img
 				src={NB403}
 				className="cursor-pointer"
+                onClick={() => onRoomClick({ name: "NB403", type: "Classroom"})}
 				style={{
 				position: "absolute",
 				top: "7.2%",
@@ -96,6 +101,7 @@ function NB4() {
 			<img
 				src={NB404}
 				className="cursor-pointer"
+                onClick={() => onRoomClick({ name: "NB404", type: "Classroom"})}
 				style={{
 				position: "absolute",
 				top: "7.2%",
@@ -108,6 +114,7 @@ function NB4() {
 			<img
 				src={NB405}
 				className="cursor-pointer"
+                onClick={() => onRoomClick({ name: "NB405", type: "Classroom"})}
 				style={{
 				position: "absolute",
 				top: "7.2%",
@@ -120,6 +127,7 @@ function NB4() {
 			<img
 				src={NB406}
 				className="cursor-pointer"
+                onClick={() => onRoomClick({ name: "NB406", type: "Classroom"})}
 				style={{
 				position: "absolute",
 				top: "7.2%",
