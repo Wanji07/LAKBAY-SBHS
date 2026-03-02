@@ -7,7 +7,7 @@ import NB104 from './nb104.svg'
 import NB105 from './nb105.svg'
 import NB106 from './nb106.svg'
 
-function NB1({ onRoomClick = () => {} }: { onRoomClick?: (roomData: any) => void }) {
+function NB1() {
     return(
         <>
             <div
@@ -37,7 +37,6 @@ function NB1({ onRoomClick = () => {} }: { onRoomClick?: (roomData: any) => void
             <img
                 src={NB1_Restroom}
                 className="cursor-pointer"
-                onClick={() => onRoomClick({ name: "New Building 1F Restroom", type: "Restroom"})}
                 style={{
                 position: "absolute",
                 top: "7%",
@@ -51,7 +50,6 @@ function NB1({ onRoomClick = () => {} }: { onRoomClick?: (roomData: any) => void
             <img
                 src={NB101}
                 className="cursor-pointer"
-                onClick={() => onRoomClick({ name: "NB101", type: "Classroom"})}
                 style={{
                 position: "absolute",
                 top: "7%",
@@ -65,7 +63,6 @@ function NB1({ onRoomClick = () => {} }: { onRoomClick?: (roomData: any) => void
             <img
                 src={NB102}
                 className="cursor-pointer"
-                onClick={() => onRoomClick({ name: "NB102", type: "Classroom"})}
                 style={{
                 position: "absolute",
                 top: "7%",
@@ -77,7 +74,6 @@ function NB1({ onRoomClick = () => {} }: { onRoomClick?: (roomData: any) => void
         <img
         src={NB103}
         className="cursor-pointer"
-        onClick={() => onRoomClick({ name: "NB103", type: "Classroom"})}
         style={{
             position: "absolute",
             top: "7.2%",
@@ -90,7 +86,6 @@ function NB1({ onRoomClick = () => {} }: { onRoomClick?: (roomData: any) => void
         <img
         src={NB104}
         className="cursor-pointer"
-        onClick={() => onRoomClick({ name: "NB104", type: "Classroom"})}
         style={{
             position: "absolute",
             top: "7.2%",
@@ -103,7 +98,6 @@ function NB1({ onRoomClick = () => {} }: { onRoomClick?: (roomData: any) => void
         <img
         src={NB105}
         className="cursor-pointer"
-        onClick={() => onRoomClick({ name: "NB105", type: "Classroom"})}
         style={{
             position: "absolute",
             top: "7.2%",
@@ -116,7 +110,6 @@ function NB1({ onRoomClick = () => {} }: { onRoomClick?: (roomData: any) => void
         <img
         src={NB106}
         className="cursor-pointer"
-        onClick={() => onRoomClick({ name: "NB106", type: "Classroom"})}
         style={{
             position: "absolute",
             top: "7.2%",

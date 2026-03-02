@@ -8,10 +8,7 @@ import Paragon from './PARAGON.svg'
 import Principal from './PRINCIPALS.svg'
 import MAPEH from './MAPEH_FACULTY.svg'
 
-function Mathay_Floor1({ onRoomClick = () => {} }: { onRoomClick?: (roomData: any) => void }) {
-
-    
-
+function Mathay_Floor1() {
     return(
         <div
             id="container"
@@ -36,16 +33,15 @@ function Mathay_Floor1({ onRoomClick = () => {} }: { onRoomClick?: (roomData: an
                 }}
             />
 
-            <img src={Girls_Restroom} className="cursor-pointer" onClick={() => onRoomClick({ name: "Girl's Restroom", type: "Restroom" })} style={{
+            <img src={Girls_Restroom} className="cursor-pointer" style={{
                 position: 'absolute',
                 top: '9%',
                 left: '36%',
                 height: '55%',
                 zIndex: 2
-                
             }} />
 
-            <img src={Boys_Restroom} className="cursor-pointer" onClick={() => onRoomClick({ name: "Boy's Restroom", type: "Restroom" })} style={{
+            <img src={Boys_Restroom} className="cursor-pointer" style={{
                 position: 'absolute',
                 top: '9%',
                 right: '36.5%',
@@ -53,7 +49,7 @@ function Mathay_Floor1({ onRoomClick = () => {} }: { onRoomClick?: (roomData: an
                 zIndex: 3
             }} />
 
-            <img src={Coop} className="cursor-pointer" onClick={() => onRoomClick({ name: "Cooperative", type: "Administrative Building" })} style={{
+            <img src={Coop} className="cursor-pointer" style={{
                 position: 'absolute',
                 top: '9%',
                 right: '2%',
@@ -61,7 +57,7 @@ function Mathay_Floor1({ onRoomClick = () => {} }: { onRoomClick?: (roomData: an
                 zIndex: 4
             }} />
 
-            <img src={Ehemplo} className="cursor-pointer" onClick={() => onRoomClick({ name: "Ehemplo Headquarters", type: "Club Building" })} style={{
+            <img src={Ehemplo} className="cursor-pointer" style={{
                 position: 'absolute',
                 top: '9%',
                 right: '19%',
@@ -69,7 +65,7 @@ function Mathay_Floor1({ onRoomClick = () => {} }: { onRoomClick?: (roomData: an
                 zIndex: 5
             }} />
 
-            <img src={Finance} className="cursor-pointer" onClick={() => onRoomClick({ name: "Finance Office", type: "Administrative Building" })} style={{
+            <img src={Finance} className="cursor-pointer" style={{
                 position: 'absolute',
                 top: '9%',
                 left: '1%',
@@ -77,7 +73,7 @@ function Mathay_Floor1({ onRoomClick = () => {} }: { onRoomClick?: (roomData: an
                 zIndex: 5
             }} />
 
-            <img src={Paragon} className="cursor-pointer" onClick={() => onRoomClick({ name: "Paragon Headquarters", type: "Club Building" })} style={{
+            <img src={Paragon} className="cursor-pointer" style={{
                 position: 'absolute',
                 top: '9%',
                 right: '27.5%',
@@ -85,7 +81,7 @@ function Mathay_Floor1({ onRoomClick = () => {} }: { onRoomClick?: (roomData: an
                 zIndex: 5
             }} />
 
-            <img src={Principal} className="cursor-pointer" onClick={() => onRoomClick({ name: "Principal's Office", type: "Administrative Building" })} style={{
+            <img src={Principal} className="cursor-pointer" style={{
                 position: 'absolute',
                 top: '9%',
                 left: '18.5%',
@@ -93,7 +89,7 @@ function Mathay_Floor1({ onRoomClick = () => {} }: { onRoomClick?: (roomData: an
                 zIndex: 5
             }} />
 
-            <img src={MAPEH} className="cursor-pointer" onClick={() => onRoomClick({ name: "MAPEH Faculty", type: "Faculty" })} style={{
+            <img src={MAPEH} className="cursor-pointer" style={{
                 position: 'absolute',
                 top: '9%',
                 right: '10.5%',
