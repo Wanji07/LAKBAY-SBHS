@@ -71,7 +71,7 @@ function MapCanvas() {
             <img
                 src={HelbertBuilding}
                 alt="Helbert Building"
-                onClick={() => navigate('/404')}
+                onClick={() => navigate('/map/hb')}
                 style={{
                     position: "absolute",
                     top: "10.4%",

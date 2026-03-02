@@ -7,9 +7,18 @@ import Floor3 from '../mapComponents/buildings/SB2/Floor3/SB2_Floor3'
 import Floor4 from '../mapComponents/buildings/SB2/Floor4/SB2_Floor4'
 import nextFloorIcon from '../assets/nextFloor.svg'
 import previousFloorIcon from '../assets/previousFloor.svg'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import Aside from '../MapAside'
+
+type RoomData = {
+  name: string
+  type: string
+  strand?: string
+  adviser?: string
+  description?: string
+  facilities?: string[]
+}
 
 function SB2() {
 
@@ -23,7 +32,7 @@ function SB2() {
 
     const [currentFloor, setFloor] = useState(0);
     const [isOpen, setOpen] = useState(false);
-    const [selectedRoom, setSelectedRoom] = useState(null);
+    const [selectedRoom, setSelectedRoom] = useState<RoomData | null>(null);
 
     const handlePreviousFloor = () => {
       setFloor(
@@ -37,7 +46,7 @@ function SB2() {
 
     const CurrentFloorComponent = floors[currentFloor];
 
-    const handleRoomClick = (roomData) => {
+    const handleRoomClick = (roomData: RoomData) => {
       setSelectedRoom(roomData);
       setOpen(true);
     }

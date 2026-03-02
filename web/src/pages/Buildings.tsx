@@ -15,7 +15,7 @@ function Buildings() {
               style={{backgroundImage: `url(${buildingPageBackground})`}}>
         </div>
 
-        <div className="relative text-center py-10 bg-gradient-to-r from-[#4a6fb1] to-[#1c4587] text-white shadow-lg">
+        <div className="relative text-center py-10 bg-linear-to-r from-[#4a6fb1] to-[#1c4587] text-white shadow-lg">
           <h1 className="text-3xl md:text-4xl font-bold mb-4">Buildings & Facilities</h1>
           <p className="text-lg md:text-xl text-[#fefeffda] max-w-2xl mx-auto px-4">
             Explore the modern infrastructure and academic facilities of San Bartolome High School

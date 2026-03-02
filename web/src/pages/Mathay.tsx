@@ -2,13 +2,22 @@
 import Navbar from '../Navbar'
 import Footer from '../Footer'
 import Aside from '../MapAside'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import Floor1 from '../mapComponents/buildings/Mathay/Floor1/Mathay_Floor1'
 import Floor2 from '../mapComponents/buildings/Mathay/Floor2/Mathay_Floor2'
 import Floor3 from '../mapComponents/buildings/Mathay/Floor3/Mathay_Floor3'
 import nextFloorIcon from '../assets/nextFloor.svg'
 import previousFloorIcon from '../assets/previousFloor.svg'
+
+type RoomData = {
+  name: string
+  type: string
+  strand?: string
+  adviser?: string
+  description?: string
+  facilities?: string[]
+}
 
 
 function Mathay() {
@@ -22,7 +31,7 @@ function Mathay() {
 
     const [currentFloor, setFloor] = useState(0);
     const [isOpen, setOpen] = useState(false);
-    const [selectedRoom, setSelectedRoom] = useState(null);
+    const [selectedRoom, setSelectedRoom] = useState<RoomData | null>(null);
 
     const handlePreviousFloor = () => {
       setFloor(
@@ -36,7 +45,7 @@ function Mathay() {
 
     const CurrentFloorComponent = floors[currentFloor];
 
-    const handleRoomClick = (roomData) => {
+    const handleRoomClick = (roomData: RoomData) => {
       setSelectedRoom(roomData);
       setOpen(true);
     }

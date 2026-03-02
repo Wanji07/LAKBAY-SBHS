@@ -54,7 +54,6 @@ function MapAside({ isOpen, selectedRoom, onClose }: MapAsideProps) {
         </div>
       </div>
 
-      {/* Description */}
       {selectedRoom.description && (
         <div className="border-b border-gray-200 pb-2 mb-2">
           <div className="text-sm text-gray-700 font-semibold mb-1">
@@ -66,7 +65,6 @@ function MapAside({ isOpen, selectedRoom, onClose }: MapAsideProps) {
         </div>
       )}
 
-      {/* Facilities */}
       {selectedRoom.facilities && (
         <div>
           <div className="text-sm text-gray-700 font-semibold mb-1">
@@ -80,7 +78,6 @@ function MapAside({ isOpen, selectedRoom, onClose }: MapAsideProps) {
         </div>
       )}
 
-      {/* Buttons */}
       <div className="flex gap-3 mt-6">
         <button className="flex-1 px-4 py-2 bg-[#1c4487] hover:bg-[#4a6eb1] text-white rounded shadow transition-colors duration-200 font-semibold">
           HIGHLIGHT ROOM

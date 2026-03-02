@@ -30,7 +30,7 @@ function Home() {
                 </button>
               </Link>
             </div>
-            <div id="heroFooter" className="hidden lg:block flex flex-col gap-2">
+            <div id="heroFooter" className="hidden lg:flex flex-col gap-2">
               <h3>Also available in Java version</h3>
               <Link to="/404">
                 <button className="bg-[#4a6fb1] hover:bg-[#26539c] text-white font-bold py-2 px-4 rounded inline-flex items-center">

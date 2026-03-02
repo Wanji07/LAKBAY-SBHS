@@ -1,7 +1,7 @@
 
 import Navbar from '../Navbar'
 import Footer from '../Footer'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import Floor1 from '../mapComponents/buildings/NewBuilding/Floor1/NB1'
 import Floor2 from '../mapComponents/buildings/NewBuilding/Floor2/NB2'
@@ -10,6 +10,15 @@ import Floor4 from '../mapComponents/buildings/NewBuilding/Floor4/NB4'
 import nextFloorIcon from '../assets/nextFloor.svg'
 import previousFloorIcon from '../assets/previousFloor.svg'
 import Aside from '../MapAside'
+
+type RoomData = {
+  name: string
+  type: string
+  strand?: string
+  adviser?: string
+  description?: string
+  facilities?: string[]
+}
 
 
 function NB() {
@@ -24,7 +33,7 @@ function NB() {
 
     const [currentFloor, setFloor] = useState(0);
     const [isOpen, setOpen] = useState(false);
-    const [selectedRoom, setSelectedRoom] = useState(null);
+    const [selectedRoom, setSelectedRoom] = useState<RoomData | null>(null);
 
     const handlePreviousFloor = () => {
       setFloor(
@@ -38,7 +47,7 @@ function NB() {
 
     const CurrentFloorComponent = floors[currentFloor];
 
-    const handleRoomClick = (roomData) => {
+    const handleRoomClick = (roomData: RoomData) => {
       setSelectedRoom(roomData);
       setOpen(true);
     }
