@@ -1,0 +1,146 @@
+.glossary-container {
+  max-width: 1200px;
+  margin: 3rem auto;
+  padding: 0 1.5rem;
+  min-height: calc(100vh - 400px);
+}
+
+.glossary-container h1 {
+  font-size: 2.5rem;
+  color: #1a1a1a;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.subtitle {
+  text-align: center;
+  color: #666;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.building-section {
+  margin-bottom: 3rem;
+  padding: 1.5rem;
+  border-left: 5px solid #1c4587;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+}
+
+.building-title {
+  font-size: 2rem;
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid #1c4587;
+}
+
+.floor-group {
+  margin-bottom: 2rem;
+}
+
+.floor-title {
+  font-size: 1.3rem;
+  color: #34495e;
+  margin: 1.5rem 0 1rem 0;
+  padding-left: 1rem;
+  border-left: 3px solid #bc9a36;
+}
+
+.rooms-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+  padding: 0 1rem;
+}
+
+.room-card {
+  display: block;
+  padding: 1.25rem;
+  border: 2px solid #ecf0f1;
+  border-radius: 8px;
+  background-color: white;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.room-card:hover {
+  border-color: #1c4587;
+  box-shadow: 0 4px 12px rgba(28, 69, 135, 0.2);
+  transform: translateY(-2px);
+  background-color: #f0f7ff;
+}
+
+.room-name {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #2c3e50;
+  margin-bottom: 0.5rem;
+  word-wrap: break-word;
+}
+
+.room-type {
+  color: #7f8c8d;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  font-style: italic;
+}
+
+.room-floor {
+  color: #bc9a36;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .glossary-container {
+    margin: 1.5rem auto;
+    padding: 0 1rem;
+  }
+
+  .glossary-container h1 {
+    font-size: 2rem;
+  }
+
+  .building-title {
+    font-size: 1.5rem;
+  }
+
+  .rooms-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 0.75rem;
+  }
+
+  .building-section {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .glossary-container {
+    padding: 0 0.75rem;
+  }
+
+  .glossary-container h1 {
+    font-size: 1.5rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .building-title {
+    font-size: 1.25rem;
+  }
+
+  .rooms-grid {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+
+  .room-card {
+    padding: 1rem;
+  }
+}

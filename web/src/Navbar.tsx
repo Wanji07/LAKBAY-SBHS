@@ -32,6 +32,7 @@ function Navbar() {
         <li><Link to="/home">Home</Link></li>
         <li><Link to="/map">Map</Link></li>
         <li><Link to="/buildings">Buildings & Faculties</Link></li>
+        <li><Link to="/glossary">Glossary</Link></li>
         <li><Link to="/404">About</Link></li>
       </ul>
       <ul 

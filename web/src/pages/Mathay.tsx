@@ -2,8 +2,8 @@
 import Navbar from '../Navbar'
 import Footer from '../Footer'
 import Aside from '../MapAside'
-import { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useState, useEffect } from 'react'
+import { useNavigate, useParams } from 'react-router-dom'
 import Floor1 from '../mapComponents/buildings/Mathay/Floor1/Mathay_Floor1'
 import Floor2 from '../mapComponents/buildings/Mathay/Floor2/Mathay_Floor2'
 import Floor3 from '../mapComponents/buildings/Mathay/Floor3/Mathay_Floor3'
@@ -23,24 +23,34 @@ type RoomData = {
 function Mathay() {
 
     const navigate = useNavigate();
+    const { floor } = useParams<{ floor: string }>();
     const floors = [
       Floor1,
       Floor2,
       Floor3,
     ];
 
-    const [currentFloor, setFloor] = useState(0);
+    const floorIndex = floor ? parseInt(floor) - 1 : 0;
+    const [currentFloor, setFloor] = useState(floorIndex);
     const [isOpen, setOpen] = useState(false);
     const [selectedRoom, setSelectedRoom] = useState<RoomData | null>(null);
+    const [highlightedRoom, setHighlightedRoom] = useState<string | null>(null);
+
+    useEffect(() => {
+      const newFloorIndex = floor ? parseInt(floor) - 1 : 0;
+      setFloor(newFloorIndex);
+    }, [floor]);
 
     const handlePreviousFloor = () => {
-      setFloor(
-        currentFloor === 0 ? floors.length - 1 : currentFloor - 1
-      );
+      const newFloor = currentFloor === 0 ? floors.length - 1 : currentFloor - 1;
+      setFloor(newFloor);
+      navigate(`/map/mathay/floor/${newFloor + 1}`);
     };
 
     const handleNextFloor = () => {
-      setFloor((currentFloor + 1) % floors.length);
+      const newFloor = (currentFloor + 1) % floors.length;
+      setFloor(newFloor);
+      navigate(`/map/mathay/floor/${newFloor + 1}`);
     };
 
     const CurrentFloorComponent = floors[currentFloor];
@@ -74,7 +84,7 @@ function Mathay() {
                 ← Back to Map
               </button>
 
-              <CurrentFloorComponent onRoomClick={handleRoomClick} />
+              <CurrentFloorComponent onRoomClick={handleRoomClick} highlightedRoom={highlightedRoom} />
             </div>
 
             <div className="flex flex-row gap-6">
@@ -130,6 +140,7 @@ function Mathay() {
               isOpen={isOpen}
               selectedRoom={selectedRoom}
               onClose={() => setOpen(false)}
+              onHighlight={(roomName) => setHighlightedRoom(roomName)}
             />
           )}
         </div>

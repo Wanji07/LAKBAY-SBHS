@@ -4,6 +4,7 @@
     "vite-plugin-svgr": "^4.5.0"
   },
   "dependencies": {
-    "react-router-dom": "^7.12.0"
+    "react-router-dom": "^7.12.0",
+    "yet-another-react-lightbox": "^3.29.1"
   }
 }

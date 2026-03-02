@@ -1,3 +1,7 @@
+import Lightbox from "yet-another-react-lightbox";
+import "yet-another-react-lightbox/styles.css";
+import { useState } from "react";
+
 type Room = {
   name: string
   type: string
@@ -11,9 +15,11 @@ type MapAsideProps = {
   isOpen: boolean
   selectedRoom: Room | null
   onClose: () => void
+  onHighlight: (roomName: string) => void
+  onViewImage?: () => void
 }
 
-function MapAside({ isOpen, selectedRoom, onClose }: MapAsideProps) {
+function MapAside({ isOpen, selectedRoom, onClose, onHighlight, onViewImage }: MapAsideProps) {
 
   if (!isOpen || !selectedRoom) return null;
 
@@ -32,7 +38,7 @@ function MapAside({ isOpen, selectedRoom, onClose }: MapAsideProps) {
 
       <div className="border-b border-gray-200 pb-2 mb-2">
         <span className="font-semibold text-blue-800">
-          Mathay Building
+          {selectedRoom.type}
         </span>
       </div>
 
@@ -79,11 +85,11 @@ function MapAside({ isOpen, selectedRoom, onClose }: MapAsideProps) {
       )}
 
       <div className="flex gap-3 mt-6">
-        <button className="flex-1 px-4 py-2 bg-[#1c4487] hover:bg-[#4a6eb1] text-white rounded shadow transition-colors duration-200 font-semibold">
+        <button onClick={() => onHighlight(selectedRoom.name)} className="flex-1 px-4 py-2 bg-[#1c4487] hover:bg-[#4a6eb1] text-white rounded shadow transition-colors duration-200 font-semibold">
           HIGHLIGHT ROOM
         </button>
         <button className="flex-1 px-4 py-2 bg-white hover:bg-[#1c4487] hover:text-white text-[#1c4487] rounded shadow transition-colors duration-200 font-semibold">
-          GET WRITTEN DIRECTIONS
+          VIEW GALLERY
         </button>
       </div>
     </aside>

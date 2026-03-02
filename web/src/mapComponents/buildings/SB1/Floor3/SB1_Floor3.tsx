@@ -7,8 +7,18 @@ import sb1_journalism from './sb1-journalism.svg'
 import sb1_property from './sb1-property.svg'
 import sb1_staff from './sb1-staff.svg'
 import Base from './sb1-1st_floor-base.svg'
+import sb1Rooms from '../../../../data/sb1Rooms'
 
-function SB1_Floor3({ onRoomClick = () => {} }: { onRoomClick?: (roomData: any) => void }) {
+function SB1_Floor3({ onRoomClick = () => {}, highlightedRoom }: { onRoomClick?: (roomData: any) => void; highlightedRoom?: string | null }) {
+  const floor3Rooms = sb1Rooms.filter(room => room.floor === 3);
+  const clinicData = floor3Rooms.find(r => r.name === "Clinic")!;
+  const englishDeptData = floor3Rooms.find(r => r.name === "English Department")!;
+  const englishAnnexData = floor3Rooms.find(r => r.name === "English Department (Annex)")!;
+  const espDeptData = floor3Rooms.find(r => r.name === "ESP Department")!;
+  const journalismData = floor3Rooms.find(r => r.name === "Journalism Office")!;
+  const propertyCustodianData = floor3Rooms.find(r => r.name === "Property Custodian")!;
+  const staffRoomData = floor3Rooms.find(r => r.name === "Staff Room")!;
+  const guidanceData = floor3Rooms.find(r => r.name === "Guidance Office")!;
   return (
     <div
       id="container"
@@ -35,15 +45,13 @@ function SB1_Floor3({ onRoomClick = () => {} }: { onRoomClick?: (roomData: any) 
       />
 
       {/* CLINIC */}
-      <img
-        src={sb1_clinic}
-        className="cursor-pointer"
-        onClick={() =>
-          onRoomClick({
-            name: "Clinic",
-            type: "Medical Facility",
-          })
-        }
+      <div
+        onClick={() => onRoomClick?.(clinicData)}
+        className={`absolute cursor-pointer transition-all ${
+          highlightedRoom === clinicData.name
+            ? "bg-yellow-400/60 ring-4 ring-yellow-500 animate-pulse"
+            : ""
+        }`}
         style={{
           position: 'absolute',
           top: '9%',
@@ -51,18 +59,25 @@ function SB1_Floor3({ onRoomClick = () => {} }: { onRoomClick?: (roomData: any) 
           height: '55%',
           zIndex: 2
         }}
-      />
+      >
+        <img
+          src={sb1_clinic}
+          style={{
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover'
+          }}
+        />
+      </div>
 
       {/* ENGLISH DEPARTMENT */}
-      <img
-        src={sb1_english}
-        className="cursor-pointer"
-        onClick={() =>
-          onRoomClick({
-            name: "English Department",
-            type: "Faculty Room"
-          })
-        }
+      <div
+        onClick={() => onRoomClick?.(englishDeptData)}
+        className={`absolute cursor-pointer transition-all ${
+          highlightedRoom === englishDeptData.name
+            ? "bg-yellow-400/60 ring-4 ring-yellow-500 animate-pulse"
+            : ""
+        }`}
         style={{
           position: 'absolute',
           top: '9%',
@@ -70,17 +85,24 @@ function SB1_Floor3({ onRoomClick = () => {} }: { onRoomClick?: (roomData: any) 
           height: '55%',
           zIndex: 3
         }}
-      />
+      >
+        <img
+          src={sb1_english}
+          style={{
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover'
+          }}
+        />
+      </div>
 
-      <img
-        src={sb1_english2}
-        className="cursor-pointer"
-        onClick={() =>
-          onRoomClick({
-            name: "English Department (Annex)",
-            type: "Faculty Room"
-          })
-        }
+      <div
+        onClick={() => onRoomClick?.(englishAnnexData)}
+        className={`absolute cursor-pointer transition-all ${
+          highlightedRoom === englishAnnexData.name
+            ? "bg-yellow-400/60 ring-4 ring-yellow-500 animate-pulse"
+            : ""
+        }`}
         style={{
           position: 'absolute',
           top: '9%',
@@ -88,18 +110,25 @@ function SB1_Floor3({ onRoomClick = () => {} }: { onRoomClick?: (roomData: any) 
           height: '55%',
           zIndex: 4
         }}
-      />
+      >
+        <img
+          src={sb1_english2}
+          style={{
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover'
+          }}
+        />
+      </div>
 
       {/* ESP DEPARTMENT */}
-      <img
-        src={sb1_esp}
-        className="cursor-pointer"
-        onClick={() =>
-          onRoomClick({
-            name: "ESP Department",
-            type: "Faculty Room"
-          })
-        }
+      <div
+        onClick={() => onRoomClick?.(espDeptData)}
+        className={`absolute cursor-pointer transition-all ${
+          highlightedRoom === espDeptData.name
+            ? "bg-yellow-400/60 ring-4 ring-yellow-500 animate-pulse"
+            : ""
+        }`}
         style={{
           position: 'absolute',
           top: '9%',
@@ -107,18 +136,25 @@ function SB1_Floor3({ onRoomClick = () => {} }: { onRoomClick?: (roomData: any) 
           height: '55%',
           zIndex: 5
         }}
-      />
+      >
+        <img
+          src={sb1_esp}
+          style={{
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover'
+          }}
+        />
+      </div>
 
       {/* JOURNALISM */}
-      <img
-        src={sb1_journalism}
-        className="cursor-pointer"
-        onClick={() =>
-          onRoomClick({
-            name: "Journalism Office",
-            type: "Club Office"
-          })
-        }
+      <div
+        onClick={() => onRoomClick?.(journalismData)}
+        className={`absolute cursor-pointer transition-all ${
+          highlightedRoom === journalismData.name
+            ? "bg-yellow-400/60 ring-4 ring-yellow-500 animate-pulse"
+            : ""
+        }`}
         style={{
           position: 'absolute',
           top: '9%',
@@ -126,18 +162,25 @@ function SB1_Floor3({ onRoomClick = () => {} }: { onRoomClick?: (roomData: any) 
           height: '55%',
           zIndex: 6
         }}
-      />
+      >
+        <img
+          src={sb1_journalism}
+          style={{
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover'
+          }}
+        />
+      </div>
 
       {/* PROPERTY CUSTODIAN */}
-      <img
-        src={sb1_property}
-        className="cursor-pointer"
-        onClick={() =>
-          onRoomClick({
-            name: "Property Custodian",
-            type: "Administrative Office"
-          })
-        }
+      <div
+        onClick={() => onRoomClick?.(propertyCustodianData)}
+        className={`absolute cursor-pointer transition-all ${
+          highlightedRoom === propertyCustodianData.name
+            ? "bg-yellow-400/60 ring-4 ring-yellow-500 animate-pulse"
+            : ""
+        }`}
         style={{
           position: 'absolute',
           top: '9%',
@@ -145,18 +188,25 @@ function SB1_Floor3({ onRoomClick = () => {} }: { onRoomClick?: (roomData: any) 
           height: '55%',
           zIndex: 6
         }}
-      />
+      >
+        <img
+          src={sb1_property}
+          style={{
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover'
+          }}
+        />
+      </div>
 
       {/* STAFF ROOM */}
-      <img
-        src={sb1_staff}
-        className="cursor-pointer"
-        onClick={() =>
-          onRoomClick({
-            name: "Staff Room",
-            type: "Faculty Room"
-          })
-        }
+      <div
+        onClick={() => onRoomClick?.(staffRoomData)}
+        className={`absolute cursor-pointer transition-all ${
+          highlightedRoom === staffRoomData.name
+            ? "bg-yellow-400/60 ring-4 ring-yellow-500 animate-pulse"
+            : ""
+        }`}
         style={{
           position: 'absolute',
           top: '9%',
@@ -164,18 +214,25 @@ function SB1_Floor3({ onRoomClick = () => {} }: { onRoomClick?: (roomData: any) 
           height: '55%',
           zIndex: 6
         }}
-      />
+      >
+        <img
+          src={sb1_staff}
+          style={{
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover'
+          }}
+        />
+      </div>
 
       {/* GUIDANCE OFFICE */}
-      <img
-        src={sb1_guidance}
-        className="cursor-pointer"
-        onClick={() =>
-          onRoomClick({
-            name: "Guidance Office",
-            type: "Student Services"
-          })
-        }
+      <div
+        onClick={() => onRoomClick?.(guidanceData)}
+        className={`absolute cursor-pointer transition-all ${
+          highlightedRoom === guidanceData.name
+            ? "bg-yellow-400/60 ring-4 ring-yellow-500 animate-pulse"
+            : ""
+        }`}
         style={{
           position: 'absolute',
           top: '9%',
@@ -183,7 +240,16 @@ function SB1_Floor3({ onRoomClick = () => {} }: { onRoomClick?: (roomData: any) 
           height: '55%',
           zIndex: 6
         }}
-      />
+      >
+        <img
+          src={sb1_guidance}
+          style={{
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover'
+          }}
+        />
+      </div>
     </div>
   );
 }

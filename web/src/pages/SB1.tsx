@@ -6,8 +6,8 @@ import Floor2 from '../mapComponents/buildings/SB1/Floor2/SB1_Floor2'
 import Floor3 from '../mapComponents/buildings/SB1/Floor3/SB1_Floor3'
 import nextFloorIcon from '../assets/nextFloor.svg'
 import previousFloorIcon from '../assets/previousFloor.svg'
-import { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useState, useEffect } from 'react'
+import { useNavigate, useParams } from 'react-router-dom'
 import Aside from '../MapAside'
 
 type RoomData = {
@@ -22,24 +22,34 @@ type RoomData = {
 function SB1() {
 
     const navigate = useNavigate();
+    const { floor } = useParams<{ floor: string }>();
     const floors = [
       Floor1,
       Floor2,
       Floor3,
     ];
 
-    const [currentFloor, setFloor] = useState(0);
+    const floorIndex = floor ? parseInt(floor) - 1 : 0;
+    const [currentFloor, setFloor] = useState(floorIndex);
     const [isOpen, setOpen] = useState(false);
     const [selectedRoom, setSelectedRoom] = useState<RoomData | null>(null);
+    const [highlightedRoom, setHighlightedRoom] = useState<string | null>(null);
+
+    useEffect(() => {
+      const newFloorIndex = floor ? parseInt(floor) - 1 : 0;
+      setFloor(newFloorIndex);
+    }, [floor]);
 
     const handlePreviousFloor = () => {
-      setFloor(
-        currentFloor === 0 ? floors.length - 1 : currentFloor - 1
-      );
+      const newFloor = currentFloor === 0 ? floors.length - 1 : currentFloor - 1;
+      setFloor(newFloor);
+      navigate(`/map/sb1/floor/${newFloor + 1}`);
     };
 
     const handleNextFloor = () => {
-      setFloor((currentFloor + 1) % floors.length);
+      const newFloor = (currentFloor + 1) % floors.length;
+      setFloor(newFloor);
+      navigate(`/map/sb1/floor/${newFloor + 1}`);
     };
 
     const CurrentFloorComponent = floors[currentFloor];
@@ -71,7 +81,7 @@ function SB1() {
                 ← Back to Map
               </button>
 
-              <CurrentFloorComponent onRoomClick={handleRoomClick} />
+              <CurrentFloorComponent onRoomClick={handleRoomClick} highlightedRoom={highlightedRoom} />
             </div>
 
             <div className="flex flex-row gap-6">
@@ -127,6 +137,7 @@ function SB1() {
               isOpen={isOpen}
               selectedRoom={selectedRoom}
               onClose={() => setOpen(false)}
+              onHighlight={(roomName) => setHighlightedRoom(roomName)}
             />
           )}
         </div>

@@ -2,6 +2,7 @@ import '../index.css';
 import MapCanvas from '../MapCanvas';
 import Navbar from '../Navbar'
 import Footer from '../Footer'
+import { Link } from 'react-router-dom'
 
 function Map() {
     return(
@@ -38,7 +39,7 @@ function Map() {
 
                 <div className="flex flex-col gap-3">
                     <button className="w-full px-4 py-2 bg-[#1c4487] hover:bg-[#4a6eb1] text-white rounded shadow transition-colors duration-200 font-semibold text-sm">
-                    VIEW CAMPUS DIRECTORY
+                    <Link to="/glossary">VIEW CAMPUS GLOSSARY (LOCATIONS)</Link>
                     </button>
 
                     <button className="w-full px-4 py-2 bg-white border border-[#1c4487] hover:bg-[#1c4487] hover:text-white text-[#1c4487] rounded shadow transition-colors duration-200 font-semibold text-sm">

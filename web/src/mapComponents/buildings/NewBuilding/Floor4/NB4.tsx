@@ -7,8 +7,18 @@ import NB403 from './nb403.svg'
 import NB404 from './nb404.svg'
 import NB405 from './nb405.svg'
 import NB406 from './nb406.svg'
+import nbRooms from '../../../../data/nbRooms'
 
-function NB4({ onRoomClick = () => {} }: { onRoomClick?: (roomData: any) => void }) {
+function NB4({ onRoomClick = () => {}, highlightedRoom }: { onRoomClick?: (roomData: any) => void; highlightedRoom?: string | null }) {
+	const floor4Rooms = nbRooms.filter(room => room.floor === 4);
+	const restroomData = floor4Rooms.find(r => r.name === "New Building 4F Restroom")!;
+	const filDepartmentData = floor4Rooms.find(r => r.name === "New Building Filipino Department")!;
+	const nb401Data = floor4Rooms.find(r => r.name === "NB401")!;
+	const nb402Data = floor4Rooms.find(r => r.name === "NB402")!;
+	const nb403Data = floor4Rooms.find(r => r.name === "NB403")!;
+	const nb404Data = floor4Rooms.find(r => r.name === "NB404")!;
+	const nb405Data = floor4Rooms.find(r => r.name === "NB405")!;
+	const nb406Data = floor4Rooms.find(r => r.name === "NB406")!;
 	return(
 		<>
 			<div
@@ -33,10 +43,13 @@ function NB4({ onRoomClick = () => {} }: { onRoomClick?: (roomData: any) => void
 				}}
 			/>
 
-			<img
-				src={NB4_Restroom}
-                onClick={() => onRoomClick({ name: "New Building 4F Restroom", type: "Restroom"})}
-				className="cursor-pointer"
+			<div
+				onClick={() => onRoomClick?.(restroomData)}
+				className={`absolute cursor-pointer transition-all ${
+					highlightedRoom === restroomData.name
+						? "bg-yellow-400/60 ring-4 ring-yellow-500 animate-pulse"
+						: ""
+				}`}
 				style={{
 				position: "absolute",
 				top: "7.2%",
@@ -44,12 +57,24 @@ function NB4({ onRoomClick = () => {} }: { onRoomClick?: (roomData: any) => void
 				height: "55%",
 				zIndex: 2,
 				}}
-			/>
+			>
+				<img
+					src={NB4_Restroom}
+					style={{
+						width: '100%',
+						height: '100%',
+						objectFit: 'cover'
+					}}
+				/>
+			</div>
 
-			<img
-				src={NB4_FIL_Department}
-				onClick={() => onRoomClick({ name: "New Building Filipino Department", type: "Faculty"})}
-				className="cursor-pointer"
+			<div
+				onClick={() => onRoomClick?.(filDepartmentData)}
+				className={`absolute cursor-pointer transition-all ${
+					highlightedRoom === filDepartmentData.name
+						? "bg-yellow-400/60 ring-4 ring-yellow-500 animate-pulse"
+						: ""
+				}`}
 				style={{
 				position: "absolute",
 				top: "7.2%",
@@ -57,12 +82,24 @@ function NB4({ onRoomClick = () => {} }: { onRoomClick?: (roomData: any) => void
 				height: "55%",
 				zIndex: 3,
 				}}
-			/>
+			>
+				<img
+					src={NB4_FIL_Department}
+					style={{
+						width: '100%',
+						height: '100%',
+						objectFit: 'cover'
+					}}
+				/>
+			</div>
 
-			<img
-				src={NB401}
-				className="cursor-pointer"
-                onClick={() => onRoomClick({ name: "NB401", type: "Classroom"})}
+			<div
+				onClick={() => onRoomClick?.(nb401Data)}
+				className={`absolute cursor-pointer transition-all ${
+					highlightedRoom === nb401Data.name
+						? "bg-yellow-400/60 ring-4 ring-yellow-500 animate-pulse"
+						: ""
+				}`}
 				style={{
 				position: "absolute",
 				top: "7.2%",
@@ -70,12 +107,24 @@ function NB4({ onRoomClick = () => {} }: { onRoomClick?: (roomData: any) => void
 				height: "55%",
 				zIndex: 4,
 				}}
-			/>
+			>
+				<img
+					src={NB401}
+					style={{
+						width: '100%',
+						height: '100%',
+						objectFit: 'cover'
+					}}
+				/>
+			</div>
 
-			<img
-				src={NB402}
-				className="cursor-pointer"
-                onClick={() => onRoomClick({ name: "NB402", type: "Classroom"})}
+			<div
+				onClick={() => onRoomClick?.(nb402Data)}
+				className={`absolute cursor-pointer transition-all ${
+					highlightedRoom === nb402Data.name
+						? "bg-yellow-400/60 ring-4 ring-yellow-500 animate-pulse"
+						: ""
+				}`}
 				style={{
 				position: "absolute",
 				top: "7.2%",
@@ -83,12 +132,24 @@ function NB4({ onRoomClick = () => {} }: { onRoomClick?: (roomData: any) => void
 				height: "55%",
 				zIndex: 5,
 				}}
-			/>
+			>
+				<img
+					src={NB402}
+					style={{
+						width: '100%',
+						height: '100%',
+						objectFit: 'cover'
+					}}
+				/>
+			</div>
 
-			<img
-				src={NB403}
-				className="cursor-pointer"
-                onClick={() => onRoomClick({ name: "NB403", type: "Classroom"})}
+			<div
+				onClick={() => onRoomClick?.(nb403Data)}
+				className={`absolute cursor-pointer transition-all ${
+					highlightedRoom === nb403Data.name
+						? "bg-yellow-400/60 ring-4 ring-yellow-500 animate-pulse"
+						: ""
+				}`}
 				style={{
 				position: "absolute",
 				top: "7.2%",
@@ -96,12 +157,24 @@ function NB4({ onRoomClick = () => {} }: { onRoomClick?: (roomData: any) => void
 				height: "55%",
 				zIndex: 6,
 				}}
-			/>
+			>
+				<img
+					src={NB403}
+					style={{
+						width: '100%',
+						height: '100%',
+						objectFit: 'cover'
+					}}
+				/>
+			</div>
 
-			<img
-				src={NB404}
-				className="cursor-pointer"
-                onClick={() => onRoomClick({ name: "NB404", type: "Classroom"})}
+			<div
+				onClick={() => onRoomClick?.(nb404Data)}
+				className={`absolute cursor-pointer transition-all ${
+					highlightedRoom === nb404Data.name
+						? "bg-yellow-400/60 ring-4 ring-yellow-500 animate-pulse"
+						: ""
+				}`}
 				style={{
 				position: "absolute",
 				top: "7.2%",
@@ -109,12 +182,24 @@ function NB4({ onRoomClick = () => {} }: { onRoomClick?: (roomData: any) => void
 				height: "55%",
 				zIndex: 7,
 				}}
-			/>
+			>
+				<img
+					src={NB404}
+					style={{
+						width: '100%',
+						height: '100%',
+						objectFit: 'cover'
+					}}
+				/>
+			</div>
 
-			<img
-				src={NB405}
-				className="cursor-pointer"
-                onClick={() => onRoomClick({ name: "NB405", type: "Classroom"})}
+			<div
+				onClick={() => onRoomClick?.(nb405Data)}
+				className={`absolute cursor-pointer transition-all ${
+					highlightedRoom === nb405Data.name
+						? "bg-yellow-400/60 ring-4 ring-yellow-500 animate-pulse"
+						: ""
+				}`}
 				style={{
 				position: "absolute",
 				top: "7.2%",
@@ -122,12 +207,24 @@ function NB4({ onRoomClick = () => {} }: { onRoomClick?: (roomData: any) => void
 				height: "55%",
 				zIndex: 8,
 				}}
-			/>
+			>
+				<img
+					src={NB405}
+					style={{
+						width: '100%',
+						height: '100%',
+						objectFit: 'cover'
+					}}
+				/>
+			</div>
 
-			<img
-				src={NB406}
-				className="cursor-pointer"
-                onClick={() => onRoomClick({ name: "NB406", type: "Classroom"})}
+			<div
+				onClick={() => onRoomClick?.(nb406Data)}
+				className={`absolute cursor-pointer transition-all ${
+					highlightedRoom === nb406Data.name
+						? "bg-yellow-400/60 ring-4 ring-yellow-500 animate-pulse"
+						: ""
+				}`}
 				style={{
 				position: "absolute",
 				top: "7.2%",
@@ -135,7 +232,16 @@ function NB4({ onRoomClick = () => {} }: { onRoomClick?: (roomData: any) => void
 				height: "55%",
 				zIndex: 9,
 				}}
-			/>
+			>
+				<img
+					src={NB406}
+					style={{
+						width: '100%',
+						height: '100%',
+						objectFit: 'cover'
+					}}
+				/>
+			</div>
 			</div>
 		</>
 	)

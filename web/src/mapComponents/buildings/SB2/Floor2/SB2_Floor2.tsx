@@ -3,8 +3,14 @@ import SB2_201 from './SB2-201.svg'
 import SB2_202 from './SB2-202.svg'
 import SB2_203 from './SB2-203.svg'
 import SB2_204 from './SB2-204.svg'
+import sb2Rooms from '../../../../data/sb2Rooms'
 
-function SB2_Floor2({ onRoomClick = () => {} }: { onRoomClick?: (roomData: any) => void }) {
+function SB2_Floor2({ onRoomClick = () => {}, highlightedRoom }: { onRoomClick?: (roomData: any) => void; highlightedRoom?: string | null }) {
+  const floor2Rooms = sb2Rooms.filter(room => room.floor === 2);
+  const sb2_201Data = floor2Rooms.find(r => r.name === "SB2 201")!;
+  const sb2_202Data = floor2Rooms.find(r => r.name === "SB2 202")!;
+  const sb2_203Data = floor2Rooms.find(r => r.name === "SB2 203")!;
+  const sb2_204Data = floor2Rooms.find(r => r.name === "SB2 204")!;
   return (
     <div
       id="container"
@@ -31,15 +37,13 @@ function SB2_Floor2({ onRoomClick = () => {} }: { onRoomClick?: (roomData: any) 
       />
 
       {/* ROOM 201 */}
-      <img
-        src={SB2_201}
-        className="cursor-pointer"
-        onClick={() =>
-          onRoomClick({
-            name: "SB2 201",
-            type: "Classroom"
-          })
-        }
+      <div
+        onClick={() => onRoomClick?.(sb2_201Data)}
+        className={`absolute cursor-pointer transition-all ${
+          highlightedRoom === sb2_201Data.name
+            ? "bg-yellow-400/60 ring-4 ring-yellow-500 animate-pulse"
+            : ""
+        }`}
         style={{
           position: 'absolute',
           top: '9%',
@@ -47,18 +51,25 @@ function SB2_Floor2({ onRoomClick = () => {} }: { onRoomClick?: (roomData: any) 
           height: '55%',
           zIndex: 2
         }}
-      />
+      >
+        <img
+          src={SB2_201}
+          style={{
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover'
+          }}
+        />
+      </div>
 
       {/* ROOM 202 */}
-      <img
-        src={SB2_202}
-        className="cursor-pointer"
-        onClick={() =>
-          onRoomClick({
-            name: "SB2 202",
-            type: "Classroom",
-          })
-        }
+      <div
+        onClick={() => onRoomClick?.(sb2_202Data)}
+        className={`absolute cursor-pointer transition-all ${
+          highlightedRoom === sb2_202Data.name
+            ? "bg-yellow-400/60 ring-4 ring-yellow-500 animate-pulse"
+            : ""
+        }`}
         style={{
           position: 'absolute',
           top: '9%',
@@ -66,18 +77,25 @@ function SB2_Floor2({ onRoomClick = () => {} }: { onRoomClick?: (roomData: any) 
           height: '55%',
           zIndex: 3
         }}
-      />
+      >
+        <img
+          src={SB2_202}
+          style={{
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover'
+          }}
+        />
+      </div>
 
       {/* ROOM 203 */}
-      <img
-        src={SB2_203}
-        className="cursor-pointer"
-        onClick={() =>
-          onRoomClick({
-            name: "SB2 203",
-            type: "Classroom",
-          })
-        }
+      <div
+        onClick={() => onRoomClick?.(sb2_203Data)}
+        className={`absolute cursor-pointer transition-all ${
+          highlightedRoom === sb2_203Data.name
+            ? "bg-yellow-400/60 ring-4 ring-yellow-500 animate-pulse"
+            : ""
+        }`}
         style={{
           position: 'absolute',
           top: '9%',
@@ -85,18 +103,25 @@ function SB2_Floor2({ onRoomClick = () => {} }: { onRoomClick?: (roomData: any) 
           height: '55%',
           zIndex: 4
         }}
-      />
+      >
+        <img
+          src={SB2_203}
+          style={{
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover'
+          }}
+        />
+      </div>
 
       {/* ROOM 204 */}
-      <img
-        src={SB2_204}
-        className="cursor-pointer"
-        onClick={() =>
-          onRoomClick({
-            name: "SB2 204",
-            type: "Classroom",
-          })
-        }
+      <div
+        onClick={() => onRoomClick?.(sb2_204Data)}
+        className={`absolute cursor-pointer transition-all ${
+          highlightedRoom === sb2_204Data.name
+            ? "bg-yellow-400/60 ring-4 ring-yellow-500 animate-pulse"
+            : ""
+        }`}
         style={{
           position: 'absolute',
           top: '9%',
@@ -104,7 +129,16 @@ function SB2_Floor2({ onRoomClick = () => {} }: { onRoomClick?: (roomData: any) 
           height: '55%',
           zIndex: 5
         }}
-      />
+      >
+        <img
+          src={SB2_204}
+          style={{
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover'
+          }}
+        />
+      </div>
     </div>
   );
 }

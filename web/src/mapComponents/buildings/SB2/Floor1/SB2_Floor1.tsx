@@ -2,8 +2,13 @@ import ALS from './SB2-ALS.svg'
 import Base from './SB2-BASE.svg'
 import DRRM from './SB2-DRRM.svg'
 import REGISTRAR from './SB2-REGISTRAR.svg'
+import sb2Rooms from '../../../../data/sb2Rooms'
 
-function SB2_Floor1({ onRoomClick = () => {} }: { onRoomClick?: (roomData: any) => void }) {
+function SB2_Floor1({ onRoomClick = () => {}, highlightedRoom }: { onRoomClick?: (roomData: any) => void; highlightedRoom?: string | null }) {
+  const floor1Rooms = sb2Rooms.filter(room => room.floor === 1);
+  const alsData = floor1Rooms.find(r => r.name === "ALS Office")!;
+  const drrmData = floor1Rooms.find(r => r.name === "DRRM Office")!;
+  const registrarData = floor1Rooms.find(r => r.name === "Registrar's Office")!;
   return (
     <div
       id="container"
@@ -30,15 +35,13 @@ function SB2_Floor1({ onRoomClick = () => {} }: { onRoomClick?: (roomData: any) 
       />
 
       {/* ALS */}
-      <img
-        src={ALS}
-        className="cursor-pointer"
-        onClick={() =>
-          onRoomClick({
-            name: "ALS Office",
-            type: "Academic Program Office",
-          })
-        }
+      <div
+        onClick={() => onRoomClick?.(alsData)}
+        className={`absolute cursor-pointer transition-all ${
+          highlightedRoom === alsData.name
+            ? "bg-yellow-400/60 ring-4 ring-yellow-500 animate-pulse"
+            : ""
+        }`}
         style={{
           position: 'absolute',
           top: '5%',
@@ -46,18 +49,25 @@ function SB2_Floor1({ onRoomClick = () => {} }: { onRoomClick?: (roomData: any) 
           height: '55%',
           zIndex: 2
         }}
-      />
+      >
+        <img
+          src={ALS}
+          style={{
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover'
+          }}
+        />
+      </div>
 
       {/* DRRM */}
-      <img
-        src={DRRM}
-        className="cursor-pointer"
-        onClick={() =>
-          onRoomClick({
-            name: "DRRM Office",
-            type: "Safety and Emergency Office",
-          })
-        }
+      <div
+        onClick={() => onRoomClick?.(drrmData)}
+        className={`absolute cursor-pointer transition-all ${
+          highlightedRoom === drrmData.name
+            ? "bg-yellow-400/60 ring-4 ring-yellow-500 animate-pulse"
+            : ""
+        }`}
         style={{
           position: 'absolute',
           top: '23%',
@@ -65,18 +75,25 @@ function SB2_Floor1({ onRoomClick = () => {} }: { onRoomClick?: (roomData: any) 
           height: '15%',
           zIndex: 3
         }}
-      />
+      >
+        <img
+          src={DRRM}
+          style={{
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover'
+          }}
+        />
+      </div>
 
       {/* REGISTRAR */}
-      <img
-        src={REGISTRAR}
-        className="cursor-pointer"
-        onClick={() =>
-          onRoomClick({
-            name: "Registrar's Office",
-            type: "Administrative Office",
-          })
-        }
+      <div
+        onClick={() => onRoomClick?.(registrarData)}
+        className={`absolute cursor-pointer transition-all ${
+          highlightedRoom === registrarData.name
+            ? "bg-yellow-400/60 ring-4 ring-yellow-500 animate-pulse"
+            : ""
+        }`}
         style={{
           position: 'absolute',
           top: '5%',
@@ -84,7 +101,16 @@ function SB2_Floor1({ onRoomClick = () => {} }: { onRoomClick?: (roomData: any) 
           height: '55%',
           zIndex: 4
         }}
-      />
+      >
+        <img
+          src={REGISTRAR}
+          style={{
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover'
+          }}
+        />
+      </div>
     </div>
   );
 }
