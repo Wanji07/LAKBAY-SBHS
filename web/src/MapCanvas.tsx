@@ -20,11 +20,11 @@ function MapCanvas() {
         <div
             style={{
                 position: "relative",
-                width: "120%",       // increase overall width
-                maxWidth: "1932px",  // scaled from 1611px
+                width: "120%",    
+                maxWidth: "1932px", 
                 aspectRatio: "1611 / 558",
                 margin: "0 auto",
-                transform: "scale(1.2)", // optional: scale up all contents
+                transform: "scale(1.2)",
                 transformOrigin: "top left"
             }}
         >
@@ -41,7 +41,7 @@ function MapCanvas() {
                     pointerEvents: 'none'
                 }}
             />
-            {/* Buildings */}
+            
             <img
                 src={SonnyBuilding1}
                 alt="Sonny Building 1"

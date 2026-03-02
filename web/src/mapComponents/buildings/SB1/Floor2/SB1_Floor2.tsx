@@ -7,7 +7,7 @@ import sb1_ap2 from './sb1_ap2.svg'
 import sb1_esp from './sb1_esp.svg'
 import Base from './sb1-3rd_floor-base.svg'
 
-function SB1_Floor2() {
+function SB1_Floor2({ onRoomClick = () => {} }: { onRoomClick?: (roomData: any) => void }) {
     return(
         <>
         <div id="container" style={{
@@ -26,49 +26,49 @@ function SB1_Floor2() {
                 zIndex: 1,
                 pointerEvents: 'none'
             }} />
-            <img src={sb301} className="cursor-pointer" style={{
+            <img src={sb301} className="cursor-pointer" onClick={() => onRoomClick({ name: "SB301", type: "Classroom"})} style={{
                 position: 'absolute',
                 top: '9%',
                 left: '1%',
                 height: '55%',
                 zIndex: 2
             }} />
-            <img src={sb302} className="cursor-pointer" style={{
+            <img src={sb302} className="cursor-pointer" onClick={() => onRoomClick({ name: "SB302", type: "Classroom"})} style={{
                 position: 'absolute',
                 top: '9%',
                 left: '19%',
                 height: '55%',
                 zIndex: 3
             }} />
-            <img src={sb303} className="cursor-pointer" style={{
+            <img src={sb303} className="cursor-pointer" onClick={() => onRoomClick({ name: "SB303", type: "Classroom"})} style={{
                 position: 'absolute',
                 top: '9%',
                 left: '64%',
                 height: '55%',
                 zIndex: 4
             }} />
-            <img src={sb304} className="cursor-pointer" style={{
+            <img src={sb304} className="cursor-pointer" onClick={() => onRoomClick({ name: "SB304", type: "Classroom"})} style={{
                 position: 'absolute',
                 top: '9%',
                 right: '1%',
                 height: '55%',
                 zIndex: 5
             }} />
-            <img src={sb1_ap} className="cursor-pointer" style={{
+            <img src={sb1_ap} className="cursor-pointer" onClick={() => onRoomClick({ name: "Araling Panlipunan Department 1", type: "Faculty"})} style={{
                 position: 'absolute',
                 top: '9%',
                 left: '37%',
                 height: '55%',
                 zIndex: 6
             }} />
-            <img src={sb1_ap2} className="cursor-pointer" style={{
+            <img src={sb1_ap2} className="cursor-pointer" onClick={() => onRoomClick({ name: "Araling Panlipunan Department 2", type: "Faculty"})} style={{
                 position: 'absolute',
                 top: '9%',
                 left: '58.5%',
                 height: '55%',
                 zIndex: 6
             }} />
-            <img src={sb1_esp} className="cursor-pointer" style={{
+            <img src={sb1_esp} className="cursor-pointer" onClick={() => onRoomClick({ name: "ESP Department", type: "Faculty"})} style={{
                 position: 'absolute',
                 bottom: '9%',
                 left: '1%',

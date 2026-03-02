@@ -6,7 +6,7 @@ import MT202 from './MT202.svg'
 import MT203 from './MT203.svg'
 import SHSFaculty from './SHS FACULTY.svg'
 
-function Mathay_Floor2() {
+function Mathay_Floor2({ onRoomClick = () => {} }: { onRoomClick?: (roomData: any) => void }) {
     return(
         <>
             <div id="container" style={{
@@ -25,42 +25,42 @@ function Mathay_Floor2() {
                     zIndex: 1,
                     pointerEvents: 'none'
                 }} />
-                <img src={Library} className="cursor-pointer" style={{
+                <img src={Library} className="cursor-pointer" onClick={() => onRoomClick({ name: 'Library', type: 'Room' })} style={{
                     position: 'absolute',
                     top: '9%',
                     right: '18%',
                     height: '55%',
                     zIndex: 2
                 }} />
-                <img src={MT201} className="cursor-pointer" style={{
+                <img src={MT201} className="cursor-pointer" onClick={() => onRoomClick({ name: 'MT201', type: 'Classroom' })} style={{
                     position: 'absolute',
                     top: '9%',
                     right: '1%',
                     height: '55%',
                     zIndex: 3
                 }} />
-                <img src={MathFaculty} className="cursor-pointer" style={{
+                <img src={MathFaculty} className="cursor-pointer" onClick={() => onRoomClick({ name: 'Math Faculty', type: 'Faculty' })} style={{
                     position: 'absolute',
                     top: '9%',
                     left: '36.5%',
                     height: '55%',
                     zIndex: 4
                 }} />
-                <img src={MT202} className="cursor-pointer" style={{
+                <img src={MT202} className="cursor-pointer" onClick={() => onRoomClick({ name: 'MT202', type: 'Classroom' })} style={{
                     position: 'absolute',
                     top: '9%',
                     left: '19%',
                     height: '55%',
                     zIndex: 5
                 }} />
-                <img src={MT203} className="cursor-pointer" style={{
+                <img src={MT203} className="cursor-pointer" onClick={() => onRoomClick({ name: 'MT203', type: 'Classroom' })} style={{
                     position: 'absolute',
                     top: '9%',
                     left: '1%',
                     height: '55%',
                     zIndex: 5
                 }} />
-                <img src={SHSFaculty} className="cursor-pointer" style={{
+                <img src={SHSFaculty} className="cursor-pointer" onClick={() => onRoomClick({ name: 'SHS Faculty', type: 'Faculty' })} style={{
                     position: 'absolute',
                     top: '9%',
                     right: '36%',

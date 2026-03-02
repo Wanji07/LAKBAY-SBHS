@@ -23,7 +23,6 @@ import Mathay_Floor1 from './mapComponents/buildings/Mathay/Floor1/Mathay_Floor1
 import Mathay_Floor2 from './mapComponents/buildings/Mathay/Floor2/Mathay_Floor2.tsx'
 import Mathay_Floor3 from './mapComponents/buildings/Mathay/Floor3/Mathay_Floor3.tsx'
 import ErrorPage from './ErrorPage.tsx'
-import Court from './pages/Court.tsx';
 
 
 function App() {
@@ -54,7 +53,6 @@ function App() {
         <Route path="/map/mathay/floor1" element={<Mathay_Floor1 />} />
         <Route path="/map/mathay/floor2" element={<Mathay_Floor2 />} />
         <Route path="/map/mathay/floor3" element={<Mathay_Floor3 />} />
-        <Route path="/map/court" element={<Court />} />
         <Route path='*' element={<ErrorPage />} />
       </Routes>
     </>

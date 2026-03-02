@@ -7,7 +7,7 @@ import NB304 from './nb304.svg'
 import NB305 from './nb305.svg'
 import NB306 from './nb306.svg'
 
-function NB3() {
+function NB3({ onRoomClick = () => {} }: { onRoomClick?: (roomData: any) => void }) {
 	return(
 		<>
 			<div
@@ -34,6 +34,7 @@ function NB3() {
 
 			<img
 				src={NB3_Restroom}
+				onClick={() => onRoomClick({ name: "New Building 3F Restroom", type: "Restroom"})}
 				className="cursor-pointer"
 				style={{
 				position: "absolute",
@@ -47,6 +48,7 @@ function NB3() {
 			<img
 				src={NB301}
 				className="cursor-pointer"
+                onClick={() => onRoomClick({ name: "NB301", type: "Classroom"})}
 				style={{
 				position: "absolute",
 				top: "7.2%",
@@ -59,6 +61,7 @@ function NB3() {
 			<img
 				src={NB302}
 				className="cursor-pointer"
+                onClick={() => onRoomClick({ name: "NB302", type: "Classroom"})}
 				style={{
 				position: "absolute",
 				top: "7.2%",
@@ -71,6 +74,7 @@ function NB3() {
 			<img
 				src={NB303}
 				className="cursor-pointer"
+                onClick={() => onRoomClick({ name: "NB303", type: "Classroom"})}
 				style={{
 				position: "absolute",
 				top: "7.2%",
@@ -83,6 +87,7 @@ function NB3() {
 			<img
 				src={NB304}
 				className="cursor-pointer"
+                onClick={() => onRoomClick({ name: "NB304", type: "Classroom"})}
 				style={{
 				position: "absolute",
 				top: "7.2%",
@@ -95,6 +100,7 @@ function NB3() {
 			<img
 				src={NB305}
 				className="cursor-pointer"
+                onClick={() => onRoomClick({ name: "NB305", type: "Classroom"})}
 				style={{
 				position: "absolute",
 				top: "7.2%",
@@ -107,6 +113,7 @@ function NB3() {
 			<img
 				src={NB306}
 				className="cursor-pointer"
+                onClick={() => onRoomClick({ name: "NB306", type: "Classroom"})}
 				style={{
 				position: "absolute",
 				top: "7.2%",

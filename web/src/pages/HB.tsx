@@ -8,9 +8,6 @@ function HB() {
       <>
         <div id="container">
         <Navbar />
-          <div id="container" className="min-h-screen grid grid-cols-[1fr_10fr]">
-          <Aside />
-          </div>
         <Footer />
         </div>
       </>
