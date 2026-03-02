@@ -19,6 +19,7 @@ function NB() {
       Floor1,
       Floor2,
       Floor3,
+      Floor4
     ];
 
     const [currentFloor, setFloor] = useState(0);
@@ -54,7 +55,7 @@ function NB() {
           
           <section
             id="mapContainer"
-            className="flex flex-row justify-center items-center gap-5 my-auto"
+            className="flex flex-col justify-center items-center gap-5 my-auto"
           >
             <div className="flex flex-col items-center w-full max-w-250.75">
               <button
@@ -67,14 +68,51 @@ function NB() {
               <CurrentFloorComponent onRoomClick={handleRoomClick} />
             </div>
 
-            <div className="flex flex-col items-center justify-center gap-6 my-8">
-              <button onClick={handleNextFloor} className="bg-blue-600 text-white rounded-full p-4">
-                <img src={nextFloorIcon} className="w-6 h-6" />
-              </button>
+            <div className="flex flex-row gap-6">
+              <button
+            onClick={handlePreviousFloor}
+            className="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 active:scale-95 
+                      text-white px-3 py-1 rounded-2xl shadow-lg 
+                      transition-all duration-200"
+          >
+            <img 
+              src={previousFloorIcon} 
+              alt="Next Floor" 
+              className="w-8 h-8"
+            />
+            <span className="text-base font-semibold">
+              Previous Floor
+            </span>
+          </button>
 
-              <button onClick={handlePreviousFloor} className="bg-blue-600 text-white rounded-full p-4">
-                <img src={previousFloorIcon} className="w-6 h-6" />
-              </button>
+            <div className="flex flex-row items-center justify-center gap-4 my-8" role="tablist" aria-label="Floor selector">
+              {floors.map((_, idx) => (                
+                <button
+                  key={idx}
+                  title={`Floor ${idx + 1}`}
+                  aria-current={currentFloor === idx ? 'true' : 'false'}
+                  className={`w-4 h-4 rounded-full transition-colors focus:outline-none ${
+                    currentFloor === idx ? 'bg-blue-600' : 'bg-gray-300 hover:bg-gray-400'
+                  }`}
+                ></button>
+              ))}
+            </div>
+
+          <button
+            onClick={handleNextFloor}
+            className="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 active:scale-95 
+                      text-white px-3 py-1 rounded-2xl shadow-lg 
+                      transition-all duration-200"
+          >
+            <img 
+              src={nextFloorIcon} 
+              alt="Next Floor" 
+              className="w-8 h-8"
+            />
+            <span className="text-base font-semibold">
+              Next Floor
+            </span>
+          </button>
             </div>
           </section>
 
