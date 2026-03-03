@@ -3,6 +3,7 @@ import MapCanvas from '../MapCanvas';
 import Navbar from '../Navbar'
 import Footer from '../Footer'
 import { Link } from 'react-router-dom'
+import CampusTitle from '../assets/Campus Map.png'
 
 function Map() {
 
@@ -39,6 +40,23 @@ function Map() {
 
                 <div className="border-t border-gray-200 pt-4"></div>
 
+                <div className="flex flex-col gap-2 p-4 rounded-lg shadow-lg">
+                    <span className="text-sm font-semibold text-gray-700">Building Legend</span>
+                    <div className="text-xs text-gray-600 space-y-2">
+                        <div className="flex items-center gap-2"><div className="w-7 h-7 rounded-full bg-[#4a6eb1] border-2 border-white flex items-center justify-center text-white text-s font-bold shadow-md">1</div> Herbert Building</div>
+                        <div className="flex items-center gap-2"><div className="w-7 h-7 rounded-full bg-[#4a6eb1] border-2 border-white flex items-center justify-center text-white text-s font-bold shadow-md">2</div> New Building</div>
+                        <div className="flex items-center gap-2"><div className="w-7 h-7 rounded-full bg-[#4a6eb1] border-2 border-white flex items-center justify-center text-white text-s font-bold shadow-md">3</div> Sonny Building 2</div>
+                        <div className="flex items-center gap-2"><div className="w-7 h-7 rounded-full bg-[#4a6eb1] border-2 border-white flex items-center justify-center text-white text-s font-bold shadow-md">4</div> Covered Court</div>
+                        <div className="flex items-center gap-2"><div className="w-7 h-7 rounded-full bg-[#4a6eb1] border-2 border-white flex items-center justify-center text-white text-s font-bold shadow-md">5</div> Mathay Building</div>
+                        <div className="flex items-center gap-2"><div className="w-7 h-7 rounded-full bg-[#4a6eb1] border-2 border-white flex items-center justify-center text-white text-s font-bold shadow-md">6</div> Sonny Building 1</div>
+                        <div className="flex items-center gap-2"><div className="w-7 h-7 rounded-full bg-[#4a6eb1] border-2 border-white flex items-center justify-center text-white text-s font-bold shadow-md">7</div> Canteen Building 1</div>
+                        <div className="flex items-center gap-2"><div className="w-7 h-7 rounded-full bg-[#4a6eb1] border-2 border-white flex items-center justify-center text-white text-s font-bold shadow-md">8</div> Canteen Building 2</div>
+                        <div className="flex items-center gap-2"><div className="w-11 h-7 rounded-full bg-[#4a6eb1] border-2 border-white flex items-center justify-center text-white text-s font-bold shadow-md">9-11</div> Miscellaneous Buildings</div>
+                    </div>
+                </div>
+
+                <div className="border-t border-gray-200 pt-4"></div>
+
                 <div className="flex flex-col gap-3">
                     <button className="w-full px-4 py-2 bg-[#1c4487] hover:bg-[#4a6eb1] text-white rounded shadow transition-colors duration-200 font-semibold text-sm">
                     <Link to="/glossary">VIEW CAMPUS GLOSSARY (LOCATIONS)</Link>
@@ -49,8 +67,13 @@ function Map() {
                     </button>
                 </div>
                 </aside>
-                <section className="relative">
-                    <div id="mapContainer" className="absolute top-1/2 left-1/3-translate-x-1/2 -translate-y-1/2 w-full h-full flex justify-center items-center">
+                <section className="relative flex-1">
+                    <div id="mapContainer" className="w-full h-full flex justify-center items-center" style={{
+                        backgroundImage: 'radial-gradient(circle, #d1d5db 1px, transparent 1px)',
+                        backgroundSize: '20px 20px',
+                        backgroundColor: '#fafafa'
+                    }}>
+                        <img src={CampusTitle} className="absolute top-1/7 left-10 transform max-w-[90%] max-h-[90%] object-contain" />
                         <MapCanvas />
                     </div>
                 </section>

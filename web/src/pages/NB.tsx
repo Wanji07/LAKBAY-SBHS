@@ -70,16 +70,22 @@ function NB() {
     return (
       <>
         <Navbar />
+        <div className="flex flex-col min-h-[calc(100vh-64px)]">
         <div
           id="container"
-          className={`min-h-screen grid ${
+          className={`grid ${
             isOpen ? "grid-cols-[1fr_350px]" : "grid-cols-1"
-          } transition-all duration-300`}
+          } transition-all duration-300 flex-1`}
         >
           
           <section
             id="mapContainer"
-            className="flex flex-col justify-center items-center gap-5 my-auto"
+            className="flex flex-col justify-center items-center gap-5"
+            style={{
+              backgroundImage: 'radial-gradient(circle, #d1d5db 1px, transparent 1px)',
+              backgroundSize: '20px 20px',
+              backgroundColor: '#fafafa'
+            }}
           >
             <div className="flex flex-col items-center w-full max-w-250.75">
               <button
@@ -153,6 +159,7 @@ function NB() {
               onHighlight={(roomName) => setHighlightedRoom(roomName)}
             />
           )}
+        </div>
         </div>
         <Footer />
       </>
