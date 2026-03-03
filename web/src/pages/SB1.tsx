@@ -7,7 +7,7 @@ import Floor3 from '../mapComponents/buildings/SB1/Floor3/SB1_Floor3'
 import nextFloorIcon from '../assets/nextFloor.svg'
 import previousFloorIcon from '../assets/previousFloor.svg'
 import { useState, useEffect } from 'react'
-import { useNavigate, useParams } from 'react-router-dom'
+import { useNavigate, useParams, useSearchParams } from 'react-router-dom'
 import Aside from '../MapAside'
 
 type RoomData = {
@@ -23,6 +23,8 @@ function SB1() {
 
     const navigate = useNavigate();
     const { floor } = useParams<{ floor: string }>();
+    const [searchParams] = useSearchParams();
+    const roomParam = searchParams.get('room');
     const floors = [
       Floor1,
       Floor2,
@@ -33,12 +35,15 @@ function SB1() {
     const [currentFloor, setFloor] = useState(floorIndex);
     const [isOpen, setOpen] = useState(false);
     const [selectedRoom, setSelectedRoom] = useState<RoomData | null>(null);
-    const [highlightedRoom, setHighlightedRoom] = useState<string | null>(null);
+    const [highlightedRoom, setHighlightedRoom] = useState<string | null>(roomParam);
 
     useEffect(() => {
       const newFloorIndex = floor ? parseInt(floor) - 1 : 0;
       setFloor(newFloorIndex);
-    }, [floor]);
+      if (roomParam) {
+        setHighlightedRoom(roomParam);
+      }
+    }, [floor, roomParam]);
 
     const handlePreviousFloor = () => {
       const newFloor = currentFloor === 0 ? floors.length - 1 : currentFloor - 1;
@@ -76,10 +81,15 @@ function SB1() {
             <div className="flex flex-col items-center w-full max-w-250.75">
               <button
                 onClick={() => navigate('/map')}
-                className="mb-4 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded shadow transition-colors duration-200 self-start"
+                className="mb-4 px-4 py-2 bg-[#1c4487] hover:bg-[#4a6eb1] text-white rounded shadow transition-colors duration-200 self-start"
               >
                 ← Back to Map
               </button>
+
+              <div className="flex flex-col items-center gap-2 mb-4 px-6 py-4 border-2 border-[#1c4487] rounded w-full max-w-md">
+                <h1 className="text-3xl font-bold text-[#1c4487]">Sonny Building 1</h1>
+                <h1 className="text-lg font-semibold text-[#1c4487]">Current floor: {currentFloor + 1}</h1>
+              </div>
 
               <CurrentFloorComponent onRoomClick={handleRoomClick} highlightedRoom={highlightedRoom} />
             </div>
@@ -87,7 +97,7 @@ function SB1() {
             <div className="flex flex-row gap-6">
               <button
             onClick={handlePreviousFloor}
-            className="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 active:scale-95 
+            className="flex items-center gap-2 bg-[#1c4487] hover:bg-[#4a6eb1] active:scale-95 
                       text-white px-3 py-1 rounded-2xl shadow-lg 
                       transition-all duration-200"
           >
@@ -108,7 +118,7 @@ function SB1() {
                   title={`Floor ${idx + 1}`}
                   aria-current={currentFloor === idx ? 'true' : 'false'}
                   className={`w-4 h-4 rounded-full transition-colors focus:outline-none ${
-                    currentFloor === idx ? 'bg-blue-600' : 'bg-gray-300 hover:bg-gray-400'
+                    currentFloor === idx ? 'bg-[#1c4487]' : 'bg-gray-300 hover:bg-gray-400'
                   }`}
                 ></button>
               ))}
@@ -116,7 +126,7 @@ function SB1() {
 
           <button
             onClick={handleNextFloor}
-            className="flex items-center gap-2 bg-blue-600 hover:bg-blue-700 active:scale-95 
+            className="flex items-center gap-2 bg-[#1c4487] hover:bg-[#4a6eb1] active:scale-95 
                       text-white px-3 py-1 rounded-2xl shadow-lg 
                       transition-all duration-200"
           >

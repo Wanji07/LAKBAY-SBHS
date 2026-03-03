@@ -55,7 +55,7 @@ function SB1_Floor2({
                 top: '9%',
                 left: '19%',
                 height: '55%',
-                zIndex: 3
+                zIndex: 2
             }}>
               <img src={sb302} style={{width: '100%', height: '100%', objectFit: 'cover'}} />
             </div>
@@ -64,7 +64,7 @@ function SB1_Floor2({
                 top: '9%',
                 left: '64%',
                 height: '55%',
-                zIndex: 4
+                zIndex: 2
             }}>
               <img src={sb303} style={{width: '100%', height: '100%', objectFit: 'cover'}} />
             </div>
@@ -73,7 +73,7 @@ function SB1_Floor2({
                 top: '9%',
                 right: '1%',
                 height: '55%',
-                zIndex: 5
+                zIndex: 2
             }}>
               <img src={sb304} style={{width: '100%', height: '100%', objectFit: 'cover'}} />
             </div>
@@ -82,7 +82,7 @@ function SB1_Floor2({
                 top: '9%',
                 left: '37%',
                 height: '55%',
-                zIndex: 6
+                zIndex: 2
             }}>
               <img src={sb1_ap} style={{width: '100%', height: '100%', objectFit: 'cover'}} />
             </div>
@@ -91,7 +91,7 @@ function SB1_Floor2({
                 top: '9%',
                 left: '58.5%',
                 height: '55%',
-                zIndex: 6
+                zIndex: 2
             }}>
               <img src={sb1_ap2} style={{width: '100%', height: '100%', objectFit: 'cover'}} />
             </div>
@@ -100,7 +100,7 @@ function SB1_Floor2({
                 bottom: '9%',
                 left: '1%',
                 height: '27%',
-                zIndex: 6
+                zIndex: 2
             }}>
               <img src={sb1_esp} style={{width: '100%', height: '100%', objectFit: 'cover'}} />
             </div>

@@ -52,7 +52,7 @@ function SB1_Floor1({
                 top: '9%',
                 left: '58.5%',
                 height: '55%',
-                zIndex: 3
+                zIndex: 2
             }}>
               <img src={RestroomMen} style={{width: '100%', height: '100%', objectFit: 'cover'}} />
             </div>
@@ -61,7 +61,7 @@ function SB1_Floor1({
                 top: '9%',
                 left: '64%',
                 height: '55%',
-                zIndex: 4
+                zIndex: 2
             }}>
               <img src={Comlab} style={{width: '100%', height: '100%', objectFit: 'cover'}} />
             </div>
@@ -70,7 +70,7 @@ function SB1_Floor1({
                 top: '9%',
                 left: '1%',
                 height: '55%',
-                zIndex: 5
+                zIndex: 2
             }}>
               <img src={AVR} style={{width: '100%', height: '100%', objectFit: 'cover'}} />
             </div>
@@ -79,7 +79,7 @@ function SB1_Floor1({
                 bottom: '9%',
                 left: '64%',
                 height: '27%',
-                zIndex: 6
+                zIndex: 2
             }}>
               <img src={TLE} style={{width: '100%', height: '100%', objectFit: 'cover'}} />
             </div>

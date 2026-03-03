@@ -45,7 +45,7 @@ function MapCanvas() {
             <img
                 src={SonnyBuilding1}
                 alt="Sonny Building 1"
-                onClick={() => navigate('/map/sb1')}
+                onClick={() => navigate('/map/sb1/floor/1')}
                 style={{
                     position: "absolute",
                     top: "24%",
@@ -58,7 +58,7 @@ function MapCanvas() {
             <img
                 src={SonnyBuilding2}
                 alt="Sonny Building 2"
-                onClick={() => navigate('/map/sb2')}
+                onClick={() => navigate('/map/sb2/floor/1')}
                 style={{
                     position: "absolute",
                     top: "62.5%",
@@ -71,7 +71,7 @@ function MapCanvas() {
             <img
                 src={HelbertBuilding}
                 alt="Helbert Building"
-                onClick={() => navigate('/map/hb')}
+                onClick={() => navigate('/map/404')}
                 style={{
                     position: "absolute",
                     top: "10.4%",
@@ -84,7 +84,7 @@ function MapCanvas() {
             <img
                 src={NewBuilding}
                 alt="New Building"
-                onClick={() => navigate('/map/nb')}
+                onClick={() => navigate('/map/nb/floor/1')}
                 style={{
                     position: "absolute",
                     top: "17%",
@@ -108,7 +108,7 @@ function MapCanvas() {
             <img
                 src={MathayBuilding}
                 alt="Mathay Building"
-                onClick={() => navigate('/map/mathay')}
+                onClick={() => navigate('/map/mathay/floor/1')}
                 style={{
                     position: "absolute",
                     top: "13.5%",

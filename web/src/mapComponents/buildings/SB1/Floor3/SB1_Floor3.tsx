@@ -83,7 +83,7 @@ function SB1_Floor3({ onRoomClick = () => {}, highlightedRoom }: { onRoomClick?:
           top: '9%',
           left: '19%',
           height: '55%',
-          zIndex: 3
+          zIndex: 2
         }}
       >
         <img
@@ -108,7 +108,7 @@ function SB1_Floor3({ onRoomClick = () => {}, highlightedRoom }: { onRoomClick?:
           top: '9%',
           right: '2%',
           height: '55%',
-          zIndex: 4
+          zIndex: 2
         }}
       >
         <img
@@ -134,7 +134,7 @@ function SB1_Floor3({ onRoomClick = () => {}, highlightedRoom }: { onRoomClick?:
           top: '9%',
           left: '36%',
           height: '55%',
-          zIndex: 5
+          zIndex: 2
         }}
       >
         <img
@@ -160,7 +160,7 @@ function SB1_Floor3({ onRoomClick = () => {}, highlightedRoom }: { onRoomClick?:
           top: '9%',
           left: '3%',
           height: '55%',
-          zIndex: 6
+          zIndex: 2
         }}
       >
         <img
@@ -186,7 +186,7 @@ function SB1_Floor3({ onRoomClick = () => {}, highlightedRoom }: { onRoomClick?:
           top: '9%',
           left: '14%',
           height: '55%',
-          zIndex: 6
+          zIndex: 2
         }}
       >
         <img
@@ -212,7 +212,7 @@ function SB1_Floor3({ onRoomClick = () => {}, highlightedRoom }: { onRoomClick?:
           top: '9%',
           right: '25%',
           height: '55%',
-          zIndex: 6
+          zIndex: 2
         }}
       >
         <img
@@ -238,7 +238,7 @@ function SB1_Floor3({ onRoomClick = () => {}, highlightedRoom }: { onRoomClick?:
           top: '9%',
           right: '14%',
           height: '55%',
-          zIndex: 6
+          zIndex: 2
         }}
       >
         <img

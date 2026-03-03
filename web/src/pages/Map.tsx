@@ -5,6 +5,8 @@ import Footer from '../Footer'
 import { Link } from 'react-router-dom'
 
 function Map() {
+
+
     return(
         <>
         <div id="container">
@@ -22,17 +24,17 @@ function Map() {
                     Frequently Accessed
                     </span>
 
-                    <button className="text-left px-3 py-2 rounded-md hover:bg-blue-50 text-sm text-gray-700 transition">
+                    <Link to="/map/sb1/floor/3?room=Guidance Office" className="text-left px-3 py-2 rounded-md hover:bg-blue-50 text-sm text-gray-700 transition">
                     Guidance Office
-                    </button>
+                    </Link>
 
-                    <button className="text-left px-3 py-2 rounded-md hover:bg-blue-50 text-sm text-gray-700 transition">
-                    ICT Laboratory
-                    </button>
+                    <Link to="/map/mathay/floor/1?room=Principal's Office" className="text-left px-3 py-2 rounded-md hover:bg-blue-50 text-sm text-gray-700 transition">
+                    Principal's Office
+                    </Link>
 
-                    <button className="text-left px-3 py-2 rounded-md hover:bg-blue-50 text-sm text-gray-700 transition">
+                    <Link to="/map/mathay/floor/2?room=SHS Faculty" className="text-left px-3 py-2 rounded-md hover:bg-blue-50 text-sm text-gray-700 transition">
                     Senior High Faculty Room
-                    </button>
+                    </Link>
                 </div>
 
                 <div className="border-t border-gray-200 pt-4"></div>

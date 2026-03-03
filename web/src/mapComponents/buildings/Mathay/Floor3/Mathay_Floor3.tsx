@@ -55,7 +55,7 @@ function Mathay_Floor3({
                     top: '9%',
                     left: '19%',
                     height: '55%',
-                    zIndex: 3
+                    zIndex: 2
                 }}>
                   <img src={MT302} style={{width: '100%', height: '100%', objectFit: 'cover'}} />
                 </div>
@@ -64,7 +64,7 @@ function Mathay_Floor3({
                     top: '9%',
                     right: '19%',
                     height: '55%',
-                    zIndex: 4
+                    zIndex: 2
                 }}>
                   <img src={MT303} style={{width: '100%', height: '100%', objectFit: 'cover'}} />
                 </div>
@@ -73,7 +73,7 @@ function Mathay_Floor3({
                     top: '9%',
                     right: '1%',
                     height: '55%',
-                    zIndex: 5
+                    zIndex: 2
                 }}>
                   <img src={MT304} style={{width: '100%', height: '100%', objectFit: 'cover'}} />
                 </div>
@@ -82,7 +82,7 @@ function Mathay_Floor3({
                     top: '9%',
                     right: '36.5%',
                     height: '55%',
-                    zIndex: 5
+                    zIndex: 2
                 }}>
                   <img src={SHS_Faculty1} style={{width: '100%', height: '100%', objectFit: 'cover'}} />
                 </div>
@@ -91,7 +91,7 @@ function Mathay_Floor3({
                     bottom: '9%',
                     right: '1%',
                     height: '27%',
-                    zIndex: 5
+                    zIndex: 2
                 }}>
                   <img src={SHS_Faculty2} style={{width: '100%', height: '100%', objectFit: 'cover'}} />
                 </div>
@@ -100,7 +100,7 @@ function Mathay_Floor3({
                     top: '9%',
                     left: '37%',
                     height: '55%',
-                    zIndex: 5
+                    zIndex: 2
                 }}>
                   <img src={TLE_Faculty} style={{width: '100%', height: '100%', objectFit: 'cover'}} />
                 </div>

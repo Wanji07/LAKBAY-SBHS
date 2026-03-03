@@ -72,7 +72,7 @@ function SB2_Floor4({ onRoomClick = () => {}, highlightedRoom }: { onRoomClick?:
                     top: '9%',
                     left: '22%',
                     height: '55%',
-                    zIndex: 3
+                    zIndex: 2
                 }}
             >
                 <img
@@ -97,7 +97,7 @@ function SB2_Floor4({ onRoomClick = () => {}, highlightedRoom }: { onRoomClick?:
                     top: '9%',
                     right: '23%',
                     height: '55%',
-                    zIndex: 4
+                    zIndex: 2
                 }}
             >
                 <img
@@ -122,7 +122,7 @@ function SB2_Floor4({ onRoomClick = () => {}, highlightedRoom }: { onRoomClick?:
                     top: '9%',
                     right: '5%',
                     height: '55%',
-                    zIndex: 5
+                    zIndex: 2
                 }}
             >
                 <img

@@ -73,7 +73,7 @@ function SB2_Floor1({ onRoomClick = () => {}, highlightedRoom }: { onRoomClick?:
           top: '23%',
           right: '32%',
           height: '15%',
-          zIndex: 3
+          zIndex: 2
         }}
       >
         <img
@@ -99,7 +99,7 @@ function SB2_Floor1({ onRoomClick = () => {}, highlightedRoom }: { onRoomClick?:
           top: '5%',
           left: '40%',
           height: '55%',
-          zIndex: 4
+          zIndex: 2
         }}
       >
         <img

@@ -65,7 +65,7 @@ function Mathay_Floor1({
                 top: '9%',
                 right: '36.5%',
                 height: '55%',
-                zIndex: 3
+                zIndex: 2
             }}>
               <img src={Boys_Restroom} style={{width: '100%', height: '100%', objectFit: 'cover'}} />
             </div>
@@ -75,7 +75,7 @@ function Mathay_Floor1({
                 top: '9%',
                 right: '2%',
                 height: '55%',
-                zIndex: 4
+                zIndex: 2
             }}>
               <img src={Coop} style={{width: '100%', height: '100%', objectFit: 'cover'}} />
             </div>
@@ -85,7 +85,7 @@ function Mathay_Floor1({
                 top: '9%',
                 right: '19%',
                 height: '55%',
-                zIndex: 5
+                zIndex: 2
             }}>
               <img src={Ehemplo} style={{width: '100%', height: '100%', objectFit: 'cover'}} />
             </div>
@@ -95,7 +95,7 @@ function Mathay_Floor1({
                 top: '9%',
                 left: '1%',
                 height: '55%',
-                zIndex: 5
+                zIndex: 2
             }}>
               <img src={Finance} style={{width: '100%', height: '100%', objectFit: 'cover'}} />
             </div>
@@ -105,7 +105,7 @@ function Mathay_Floor1({
                 top: '9%',
                 right: '27.5%',
                 height: '55%',
-                zIndex: 5
+                zIndex: 2
             }}>
               <img src={Paragon} style={{width: '100%', height: '100%', objectFit: 'cover'}} />
             </div>
@@ -115,7 +115,7 @@ function Mathay_Floor1({
                 top: '9%',
                 left: '18.5%',
                 height: '55%',
-                zIndex: 5
+                zIndex: 2
             }}>
               <img src={Principal} style={{width: '100%', height: '100%', objectFit: 'cover'}} />
             </div>
@@ -125,7 +125,7 @@ function Mathay_Floor1({
                 top: '9%',
                 right: '10.5%',
                 height: '55%',
-                zIndex: 5
+                zIndex: 2
             }}>
               <img src={MAPEH} style={{width: '100%', height: '100%', objectFit: 'cover'}} />
             </div>

@@ -21,6 +21,7 @@ function Mathay_Floor2({
   const mt202Data = floor2Rooms.find(r => r.name === 'MT202')!;
   const mt203Data = floor2Rooms.find(r => r.name === 'MT203')!;
   const shsFacultyData = floor2Rooms.find(r => r.name === 'SHS Faculty')!;
+
     return(
         <>
             <div id="container" style={{
@@ -53,7 +54,7 @@ function Mathay_Floor2({
                     top: '9%',
                     right: '1%',
                     height: '55%',
-                    zIndex: 3
+                    zIndex: 2
                 }}>
                   <img src={MT201} style={{width: '100%', height: '100%', objectFit: 'cover'}} />
                 </div>
@@ -62,7 +63,7 @@ function Mathay_Floor2({
                     top: '9%',
                     left: '36.5%',
                     height: '55%',
-                    zIndex: 4
+                    zIndex: 2
                 }}>
                   <img src={MathFaculty} style={{width: '100%', height: '100%', objectFit: 'cover'}} />
                 </div>
@@ -71,7 +72,7 @@ function Mathay_Floor2({
                     top: '9%',
                     left: '19%',
                     height: '55%',
-                    zIndex: 5
+                    zIndex: 2
                 }}>
                   <img src={MT202} style={{width: '100%', height: '100%', objectFit: 'cover'}} />
                 </div>
@@ -80,7 +81,7 @@ function Mathay_Floor2({
                     top: '9%',
                     left: '1%',
                     height: '55%',
-                    zIndex: 5
+                    zIndex: 2
                 }}>
                   <img src={MT203} style={{width: '100%', height: '100%', objectFit: 'cover'}} />
                 </div>
@@ -89,7 +90,7 @@ function Mathay_Floor2({
                     top: '9%',
                     right: '36%',
                     height: '55%',
-                    zIndex: 5
+                    zIndex: 2
                 }}>
                   <img src={SHSFaculty} style={{width: '100%', height: '100%', objectFit: 'cover'}} />
                 </div>
